@@ -1,0 +1,20 @@
+{
+  "name": "Link-Website",
+  "version": "1.0.0",
+  "description": "Software Design Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DonaldMbara/Link-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DonaldMbara/Link-Website/issues"
+  },
+  "homepage": "https://github.com/DonaldMbara/Link-Website#readme"
+}

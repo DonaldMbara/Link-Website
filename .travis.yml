@@ -7,5 +7,4 @@ install:
   - npm install
  
 script:
-  - npm run test:unit && npm run test:snapshot && npm run test:cypresslanguage: node_js
- 
+  - npm test 

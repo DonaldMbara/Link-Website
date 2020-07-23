@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/DonaldMbara/Link-Website/issues"
   },
-  "homepage": "https://github.com/DonaldMbara/Link-Website#readme"
+  "homepage": "https://github.com/DonaldMbara/Link-Website#readme",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
 }

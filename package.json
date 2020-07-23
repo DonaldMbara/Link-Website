@@ -4,7 +4,8 @@
   "description": "Software Design Project",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config=./jest.config.json --coverage"
+    "test": "jest --coverage",
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,16 @@
   },
   "homepage": "https://github.com/DonaldMbara/Link-Website#readme",
   "devDependencies": {
-    "jest": "^26.1.0"
+    "coveralls": "^3.1.0",
+    "jest": {
+      "collectCoverage": "true",
+      "collectCoverageFrom": [
+        "Link website/**/*.{js,jsx,mjs}"
+      ],
+      "moduleDirectories": [
+        "node_modules",
+        "Link website"
+      ]
+    }
   }
 }

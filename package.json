@@ -4,7 +4,7 @@
   "description": "Software Design Project",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config=./jest.config.json --coverage"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

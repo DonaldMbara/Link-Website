@@ -1,9 +1,12 @@
+<?php    include("login.php"); ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>    
+<head>
 
-	<!--You can host everything locally instead-->
-	<title>Link Website</title>
+    <!--You can host everything locally instead-->
+    <title>Link Website</title>
     <meta charset="UTF-8">
     <!--Bootstrap-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,10 +19,77 @@
 
 </head>
 <body>
-	<!--loading jQuery library-->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<!--bootstrap-->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<!--loading jQuery library-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--bootstrap-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<div class="login-page">
+    <div class="form">
+        <!--Login form -->
+        <form class="login-form" method="POST" action="#">
+            <h1>Login</h1>
+            <div class="textbox">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                <input type="text" placeholder="Student Number" name="studentNo" value=""/>
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input type="password" placeholder="Password" name="password" value="">
+            </div>
+
+            <input class="button" type="submit" name="" value="Sign in">
+            <p class="message"> Don't Have An Account? <a href="#">Register here</a>
+            </p>
+        </form>
+
+        <!--Sigup form -->
+        <form class="signup-form" method="POST" action="#">
+            <h1>Registration</h1>
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="Username" name="username" value=""/>
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="password" placeholder="First Name" name="firstName" value="">
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="Last Name" name="lastName" value=""/>
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <input type="text" placeholder="Email" name="email" value=""/>
+            </div>
+
+            <div class="textbox">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="Student Number" name="studentNo" value=""/>
+            </div>
+            <div class="textbox">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input type="password" placeholder="Password" name="password" value="">
+            </div>
+
+            <input class="button" type="submit" name="" value="Registration">
+            <p class="message"> Already registered? <a href="#">Login here</a>
+
+        </form>
+    </div>
+</div>
+
+<!--Jquery, makes the message class to toggle and take you from registration to login or vice versa -->
+<script>
+    $('.message a').click(function () {
+        $('form').animate({height: "toggle",opacity:"toggle"},'slow');
+    });
+</script>
 
 </body>
 </html>

@@ -1,92 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!--You can host everything locally instead-->
-    <title>Link Website</title>
     <meta charset="UTF-8">
-    <!--Bootstrap-->
+    <title>Splash Screen</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!--css file-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!--js file-->
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #008577;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .header {
+            background-color: #008577;
+            color: black;
+            text-align: center;
+            padding: 15px;
+        }
+        .logo{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35%;
+        }
+
+        button {
+            font-family: "Roboto", sans-serif;
+            border: 1px solid black;
+            bottom: auto;
+            background-color: #008577;
+            color: black;
+            width: 100%;
+            outline: none;
+            font-size: 16px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+        }
+
+        button:hover{
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+        }
 
 
+    </style>
 </head>
 <body>
-<!--loading jQuery library-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!--bootstrap-->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-
-<div class="login-page">
-    <div class="form">
-        <!--Login form -->
-        <form class="login-form" method="POST" action="#">
-            <h1>Login</h1>
-            <div class="textbox">
-                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                <input type="text" placeholder="Student Number" name="studentNo" value=""/>
-            </div>
-
-            <div class="textbox">
-                <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="password" placeholder="Password" name="password" value="">
-            </div>
-
-            <input class="button" type="submit" name="" value="Sign in">
-            <p class="message"> Don't Have An Account? <a href="#">Register here</a>
-            </p>
-        </form>
-
-        <!--Sigup form -->
-        <form class="signup-form" method="POST" action="#">
-            <h1>Registration</h1>
-            <div class="textbox">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="Username" name="username" value=""/>
-            </div>
-
-            <div class="textbox">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="password" placeholder="First Name" name="firstName" value="">
-            </div>
-
-            <div class="textbox">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="Last Name" name="lastName" value=""/>
-            </div>
-
-            <div class="textbox">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <input type="text" placeholder="Email" name="email" value=""/>
-            </div>
-
-            <div class="textbox">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="Student Number" name="studentNo" value=""/>
-            </div>
-            <div class="textbox">
-                <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="password" placeholder="Password" name="password" value="">
-            </div>
-
-            <input class="button" type="submit" name="" value="Registration">
-            <p class="message"> Already registered? <a href="#">Login here</a>
-
-        </form>
+    <div class="header">
+        <h1 class="welcome-text"><b>Welcome</b></h1>
     </div>
-</div>
+    <div class="col-3 col-s-12">
+        <div class="aside">
+            <img class="logo" src="image/linkhands3.png" >
 
-<!--Jquery, makes the message class to toggle and take you from registration to login or vice versa -->
-<script>
-    $('.message a').click(function () {
-        $('form').animate({height: "toggle",opacity:"toggle"},'slow');
-    });
-</script>
+        </div>
+    </div>
 
+    <button onclick="window.location.href = 'html pages/login.html'">Continue</button>
 </body>
 </html>

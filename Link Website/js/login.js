@@ -29,7 +29,7 @@ $(document).ready(function () {
 
                     alert(data);
                     if(data === 'data matched'){
-                        window.location.href = 'html/home.html';
+                        window.location = 'home.html';
                     }
                     if(data === 'try again'){
                         alert('Invalid Credentials')

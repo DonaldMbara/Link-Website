@@ -9,7 +9,6 @@ $(document).ready(function() {
         let studentNo = $('#signup_studentNo').val();
         let password = $('#signup_password').val();
 
-        let check ;
 
 
         $(".error").remove();//removing everything else that is in the span before using it
@@ -20,17 +19,12 @@ $(document).ready(function() {
             $('#username').after('<span class="error">This field is required</span>');
 
         }
-        else {check = true;}
         if (first_name.length < 1) {
             $('#first_name').after('<span class="error">This field is required</span>');
         }
-        else {check = true;}
-
         if (last_name.length < 1) {
             $('#last_name').after('<span class="error">This field is required</span>');
         }
-        else {check = true;}
-
         if (email.length < 1) {
             $('#email').after('<span class="error">This field is required</span>');
         } else  {
@@ -39,21 +33,41 @@ $(document).ready(function() {
             if (!validEmail) {
                 $('#email').after('<span class="error">Enter a valid email</span>');
             }
-            else {check = true;}
 
         }
         if (studentNo.length < 1) {
             $('#signup_studentNo').after('<span class="error">This field is required</span>');
         }
-        else {check = true;}
-
         if (password.length < 1) {
             $('#signup_password').after('<span class="error">Password must be at least 8 characters long</span>');
         }
-        else {check = true;}
 
-        //still have to do ajax part . anyone can finish this part
-        //if they managed to figured out a way to bypass CORS
+
+        $.ajax({
+            header: {"Access-Control-Allow-Origin" :"*"},
+            type: "POST",
+            url: 'https://lamp.ms.wits.ac.za/~s1819369/registration.php',
+            data: {
+                studentNo: studentNo,
+                first_name: first_name,
+                last_name : last_name,
+                username: username,
+                password :password,
+                email: email
+
+            },
+            success: function (data) {
+
+                alert(data);
+                if(data === 'Registered Successfully'){
+                    window.location.href = 'html/login.html';
+                }
+                if(data === 'Something went wrong'){
+                    alert('Something went wrong')
+                }
+
+            },
+        });
 
     });
 

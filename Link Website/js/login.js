@@ -16,12 +16,10 @@ $(document).ready(function () {
             $('#login_password').after('<span class="error">Password must be at least 8 characters long</span>');
         }
 
-        //here I am still facing CORS errors. anyone can help out
-        //I FEEL LIKE THIS SHOULD BE IN AN ELSE STATEMENT AFTER CHECKING VALIDATIONS
-            $.ajax({
+               $.ajax({
+                header: {"Access-Control-Allow-Origin" :"*"},
                 type: "POST",
                 url: 'https://lamp.ms.wits.ac.za/~s1819369/login.php',
-                headers: {  'Access-Control-Allow-Origin': 'https://lamp.ms.wits.ac.za/~s1819369/login.php' },
                 data: {
                     studentNo: studentNo,
                     password :password
@@ -31,7 +29,7 @@ $(document).ready(function () {
 
                     alert(data);
                     if(data === 'data matched'){
-                        window.location = 'html pages/home.html';
+                        window.location.href = 'html/home.html';
                     }
                     if(data === 'try again'){
                         alert('Invalid Credentials')

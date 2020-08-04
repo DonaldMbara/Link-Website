@@ -99,3 +99,13 @@ body{
     color: #4CAF50;
     text-decoration: none;
 }
+
+.error {
+    color: red;
+    font-size: small;
+    margin-left: 2px;
+}
+
+label.error {
+    display: inline;
+}

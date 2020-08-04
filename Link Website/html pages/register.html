@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="../css/login-register.css">
     <!--loading jQuery library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/register.js"></script>
+
 
 
 
@@ -19,45 +21,39 @@
 <body>
 <div class="register-page">
     <div class="form">
-        <form class="signup-form" method="POST" action="#">
+        <form class="signup-form" id="signup-form" method="POST" action="#">
             <h1>Registration</h1>
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="Username" name="username" value=""/>
-                <span id = "unameSpan"></span>
+                <input type="text" id="username" placeholder="Username" name="username" value=""/>
             </div>
 
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="First Name" name="firstName" value="">
-                <span id = "fnameSpan"></span>
+                <input type="text" id = "first_name" placeholder="First Name" name="firstName" value="">
 
             </div>
 
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="Last Name" name="lastName" value=""/>
-                <span id = "lnameSpan"></span>
+                <input type="text" id="last_name" placeholder="Last Name" name="lastName" value=""/>
 
             </div>
 
             <div class="textbox">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <input type="text" placeholder="Email" name="email" value=""/>
-                <span id = "emailSpan"></span>
+                <input type="text" id="email" placeholder="Email" name="email" value=""/>
 
             </div>
 
             <div class="textbox">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" placeholder="Student Number" name="studentNo" value=""/>
-                <span id = "stdNoSpan"></span>
+                <input type="text" id="signup_studentNo" placeholder="Student Number" name="studentNo" value=""/>
 
             </div>
             <div class="textbox">
                 <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="password" placeholder="Password" name="password" value="">
-                <span id = "passwordSpan"></span>
+                <input type="password" id="signup_password" placeholder="Password" name="password" value="">
 
             </div>
 

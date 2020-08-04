@@ -12,9 +12,9 @@
     <link rel="stylesheet" type="text/css" href="../css/login-register.css">
     <!--loading jQuery library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <!--js file-->
-    <script type="text/javascript" src="../js/register.js"></script>
-    <script src="../js/login.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
 
 
 
@@ -26,23 +26,21 @@
 <div class="login-page">
     <div class="form">
         <!--Login form -->
-        <form class="login-form" method="POST" action="#">
+        <form class="form" id="login-form" method="POST">
             <h1>Login</h1>
             <div class="textbox">
                 <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                <input type="text" placeholder="Student Number" name="studentNo" value=""/>
-                <span id="stdNoSpan"></span>
+                <input type="text" id="login_stdNo" placeholder="Student Number" name="login_stdNo" value=""/>
 
             </div>
 
             <div class="textbox">
                 <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="password" placeholder="Password" name="password" value="">
-                <span id="passwordSpan"></span>
+                <input type="password" id="login_password" placeholder="Password" name="login_password" value="">
 
             </div>
 
-            <input class="button" type="submit" name="" value="Sign in">
+            <input class="button"  type="submit"  value="Sign in">
             <p class="message"> Don't have an account? <a href="register.html">Register here</a>
             </p>
         </form>

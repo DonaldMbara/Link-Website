@@ -60,7 +60,7 @@ $(document).ready(function() {
 
                 alert(data);
                 if(data === 'Registered Successfully'){
-                    window.location.href = 'html/login.html';
+                    window.location.href = 'login.html';
                 }
                 if(data === 'Something went wrong'){
                     alert('Something went wrong')

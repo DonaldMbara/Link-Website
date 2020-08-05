@@ -23,9 +23,12 @@
     "coveralls": "^3.1.0"
   },
   "jest": {
-     "collectCoverageFrom": [
-        "Link Website/**/*.js"
-     ]
+    "collectCoverageFrom": [
+      "Link Website/**/*.js"
+    ]
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "jquery": "^3.5.1"
   }
-
 }

@@ -24,7 +24,7 @@
   },
   "jest": {
      "collectCoverageFrom": [
-        "**/*.js"  
+        "Link website/*.js"  
      ]
   }
 

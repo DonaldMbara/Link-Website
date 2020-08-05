@@ -1,22 +1,4 @@
-<!--
 
-SUGGESTION FOR HOME SCREEN
-SUGGESTION FOR HOME SCREEN
-
-SUGGESTION FOR HOME SCREEN
-SUGGESTION FOR HOME SCREEN
-
-SUGGESTION FOR HOME SCREEN
-SUGGESTION FOR HOME SCREEN
-
-SUGGESTION FOR HOME SCREEN
-SUGGESTION FOR HOME SCREEN
-
-SUGGESTION FOR HOME SCREEN
-SUGGESTION FOR HOME SCREEN
-
-
--->
 
 <!DOCTYPE html>
 <html>
@@ -26,12 +8,11 @@ SUGGESTION FOR HOME SCREEN
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/home_style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="../js/post.js"></script>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: #008577">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: lightyellow">
 
 
 <script>
@@ -44,19 +25,24 @@ SUGGESTION FOR HOME SCREEN
         document.getElementById("charLength").innerHTML=str.length;
     }
 
+    function setName(name) {
+        document.querySelector('#courses').innerText = name;
+        document.querySelector('#courses').value = name;
+
+    }
 
 </script>
 
 <style>
     .dropbtn {
-        color: white;
+        color: black;
         padding: 16px;
         font-size: 16px;
         width: 100%;
         background: none;
-        border: 2px solid white;
+        border: 2px solid black;
         cursor: pointer;
-        margin: 10px 10px ;
+        margin: 10px 5px ;
         outline: none;
     }
 
@@ -69,7 +55,7 @@ SUGGESTION FOR HOME SCREEN
         display: none;
         position: absolute;
         background-color: #f1f1f1;
-        min-width: 160px;
+        min-width: 120px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
         overflow-y: scroll;
@@ -88,42 +74,65 @@ SUGGESTION FOR HOME SCREEN
 
     .dropdown:hover .dropdown-content {display: block;}
 
-    .dropdown:hover .dropbtn {background-color: #0f8e7d;}
+    .dropdown:hover .dropbtn {background-color: white;}
+
+    .button{
+        width: 50%;
+        background: none;
+        color: black;
+        border: 2px solid black;
+        padding: 18px ;
+        cursor: pointer;
+        margin: 12px 0 ;
+        outline: none;
+        bottom: 50px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    }
 </style>
 
 <fieldset>
     <legend style="color:black;">
-        Post Your question here
+        Write and post your question here
     </legend>
-    <form name="len">
+    <form name="form" id ="posting-form" method="post" >
 
-            <textarea cols="30" rows="4" name="posting_text" maxlength="100" placeholder="write your post..."
+            <textarea  id = "status" cols="30" rows="10"  maxlength="100" placeholder="write your question..."
                       onkeyup='count()'onfocus='(this.style.backgroundColor="lightyellow")'
-                      style="resize: none; width: 500px; height: 150px;">
+                      style="resize: none; width: 400px; height: 100px;">
 
 
 
 </textarea>
+        <!--I am using value to pass to the database-->
         <div class="dropdown">
-            <button class="dropbtn">Courses</button>
+            <button class="dropbtn" id="courses" value ="">Courses</button>
             <div class="dropdown-content" id="select_courses">
-                <a >Course 1</a>
-                <a >Course 1</a>
-                <a >Course 1</a>
-                <a >Course 1</a>
-                <a >Course 1</a>
-                <a >Course 1</a>
-                <a >Course 1</a>
-                <a >Course 1</a>
-                <a >Course 1</a>
+                <a class = "Scince" id="COMS" value = "COMS" onclick="setName('COMS')" > COMS</a>
+                <a class = "Scince" id="APPM" onclick="setName('APPM')"> APPM</a>
+                <a class = "Scince" id="PHYSICS" onclick="setName('PHYSICS')">PHYSICS</a>
+                <a class = "Scince" id="MATHEMATICS" onclick="setName('MATHEMATICS')">MATHEMATICS</a>
+                <a class = "Commerce" id="ACCOUNTING SCIENCE" onclick="setName('ACCOUNTING SCIENCE')">ACCOUNTING SCIENCE</a>
+                <a class = "Commerce" id="ECONOMICS" onclick="setName('ECONOMICS')">ECONOMICS</a>
+                <a class = "Commerce" id="FINANCE" onclick="setName('FINANCE')">FINANCE</a>
+                <a class = "Health Science" id="DENTAL SCIENCE"  onclick="setName('DENTAL SCIENCE')"> DENTAL SCIENCE</a>
+                <a class = "Commerce" id="DIGITAL ARTS" onclick="setName('DIGITAL ARTS')">DIGITAL ARTS</a>
+                <a class = "Health Science" id="MEDICINE AND SURGERY" onclick="setName('MEDICINE AND SURGERY')">MEDICINE AND SURGERY</a>
+                <a class = "Health Science" id="PHYSIOTHERAPY" onclick="setName('PHYSIOTHERAPY')"> PHYSIOTHERAPY</a>
+                <a class = "Humanities" id="EDUCATION" onclick="setName('EDUCATION')"> EDUCATION</a>
 
             </div>
         </div>
+        <p>Max 100 characters</p>
+        <div id="charLength"></div>
+        <hr>
+        <input class="button"  type="submit"  value="Post">
+        <hr>
+
+
     </form>
 </fieldset>
-<p>Max 100 characters</p>
-<div id="charLength"></div>
-<hr>
+
 
 
 

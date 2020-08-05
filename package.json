@@ -21,12 +21,6 @@
   "devDependencies": {
     "coveralls": "^3.1.0",
     "jest":"^26.1.0"
-  },
-  "jest": {
-  "collectCoverageFrom": [
-      "**/*.js",
-      "!data/keyMap.js",
-      "!/node_modules/",
-  ]
-}
+  }
+
 }

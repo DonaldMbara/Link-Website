@@ -1,0 +1,132 @@
+<!--
+
+SUGGESTION FOR HOME SCREEN
+SUGGESTION FOR HOME SCREEN
+
+SUGGESTION FOR HOME SCREEN
+SUGGESTION FOR HOME SCREEN
+
+SUGGESTION FOR HOME SCREEN
+SUGGESTION FOR HOME SCREEN
+
+SUGGESTION FOR HOME SCREEN
+SUGGESTION FOR HOME SCREEN
+
+SUGGESTION FOR HOME SCREEN
+SUGGESTION FOR HOME SCREEN
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+<link>
+<title>Link Online Tutoring</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/home_style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: #008577">
+
+
+<script>
+    function count(){
+        let str="";
+        let val=document.len.posting_text.value;
+
+        str=(val);
+
+        document.getElementById("charLength").innerHTML=str.length;
+    }
+
+
+</script>
+
+<style>
+    .dropbtn {
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        width: 100%;
+        background: none;
+        border: 2px solid white;
+        cursor: pointer;
+        margin: 10px 10px ;
+        outline: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        overflow-y: scroll;
+        height: 400px;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+
+    }
+
+    .dropdown-content a:hover {background-color: #ddd;}
+
+    .dropdown:hover .dropdown-content {display: block;}
+
+    .dropdown:hover .dropbtn {background-color: #0f8e7d;}
+</style>
+
+<fieldset>
+    <legend style="color:black;">
+        Post Your question here
+    </legend>
+    <form name="len">
+
+            <textarea cols="30" rows="4" name="posting_text" maxlength="100" placeholder="write your post..."
+                      onkeyup='count()'onfocus='(this.style.backgroundColor="lightyellow")'
+                      style="resize: none; width: 500px; height: 150px;">
+
+
+
+</textarea>
+        <div class="dropdown">
+            <button class="dropbtn">Courses</button>
+            <div class="dropdown-content" id="select_courses">
+                <a >Course 1</a>
+                <a >Course 1</a>
+                <a >Course 1</a>
+                <a >Course 1</a>
+                <a >Course 1</a>
+                <a >Course 1</a>
+                <a >Course 1</a>
+                <a >Course 1</a>
+                <a >Course 1</a>
+
+            </div>
+        </div>
+    </form>
+</fieldset>
+<p>Max 100 characters</p>
+<div id="charLength"></div>
+<hr>
+
+
+
+
+</body>
+</html>

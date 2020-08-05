@@ -24,8 +24,7 @@
   },
   "jest": {
      "collectCoverageFrom": [
-        "**/*.js",
-        "!/node_modules/"
+        "**/*.js"  
      ]
   }
 

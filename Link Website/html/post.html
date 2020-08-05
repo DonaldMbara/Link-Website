@@ -18,7 +18,7 @@
 <script>
     function count(){
         let str="";
-        let val=document.len.posting_text.value;
+        let val=document.form.posting_text.value;
 
         str=(val);
 
@@ -97,7 +97,7 @@
     </legend>
     <form name="form" id ="posting-form" method="post" >
 
-            <textarea  id = "status" cols="30" rows="10"  maxlength="100" placeholder="write your question..."
+            <textarea  id = "status" cols="30" rows="10" name="posting_text"  maxlength="100" placeholder="write your question..."
                       onkeyup='count()'onfocus='(this.style.backgroundColor="lightyellow")'
                       style="resize: none; width: 400px; height: 100px;">
 

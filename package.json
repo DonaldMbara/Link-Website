@@ -20,6 +20,10 @@
   "homepage": "https://github.com/DonaldMbara/Link-Website#readme",
   "devDependencies": {
     "coveralls": "^3.1.0",
-    "jest": "^26.1.0"
+    "jest":{ "^26.1.0",
+           "collectCoverageFrom": [
+                                    "**/*.js",
+                                   "!/node_modules/",]
+    }
   }
 }

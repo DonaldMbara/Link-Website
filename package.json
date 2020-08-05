@@ -19,17 +19,14 @@
   },
   "homepage": "https://github.com/DonaldMbara/Link-Website#readme",
   "devDependencies": {
-<<<<<<< HEAD
     "jest": "^26.1.0"
-=======
     "coveralls": "^3.1.0",
     "jest":"^26.1.0"
   },
   "jest": {
      "collectCoverageFrom": [
-        "Link Website/**/*.js"  
+        "Link Website/**/*.js"
      ]
->>>>>>> a0fbc8ced61fd7daa42d755b461e87ff2ab3ead8
   }
 
 }

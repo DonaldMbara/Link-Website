@@ -16,6 +16,11 @@
 
 <script>
 
+    /*
+    * You can fetch name user id by just copying this and put in the script.
+    * I used onClick = function e.i getUsername to pass username through the pages
+    * here I passed user name with the link, check under post button. onclick calls the function below
+     */
     //here I adjust the path
     //when i click post via the menu it sends the path with the username
     function getUsername(){
@@ -25,10 +30,12 @@
             let arr = data.split("username="); //split and get the link
             let username =  arr[arr.length-1];
 
-            let path = "./post.html?username=" + username;
-            $("#post_btn").href(path);
+            let path = "post.html?username=" + decodeURIComponent(username);
+            document.querySelector("#post_id").href = path ; //set the link of the html page with the username on it
 
     }
+
+    //go to post.html to see how i get the username from the link
 
 
 </script>
@@ -89,7 +96,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  href=""  onclick="getUsername()" >
+                        <a href=""  onclick="getUsername()"  id="post_id">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             Post
                         </a>

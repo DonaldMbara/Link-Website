@@ -17,6 +17,12 @@
       display: flex;
       /* left:365px; */
     }
+    .contents{
+      color: green;
+      justify-content: center;
+      display: flex;
+
+    }
     .wrapper{
       position: absolute;
       top: 50%;

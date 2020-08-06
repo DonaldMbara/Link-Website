@@ -6,7 +6,6 @@ $(document).ready(function () {
 
         let status = $('#status').val().trim();
         let courseid = $('.dropbtn').attr("name");
-        let name = $('#post_btn').attr("name"); //here I made the name to be the name of the button which is the username
 
         $(".error").remove(); //removing everything else that is in the span before using it
 
@@ -27,7 +26,7 @@ $(document).ready(function () {
             url: 'https://lamp.ms.wits.ac.za/~s1819369/post.php',
             data: {
                 status: status,
-                author :name, 
+                author :"Dons",
                 courseid: courseid
 
             },
@@ -42,9 +41,6 @@ $(document).ready(function () {
 
             },
         });
-
-
-
 
 
 

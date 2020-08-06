@@ -1,0 +1,61 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+  body {
+      background-color: #008577;
+      margin: 0 auto;
+      padding: 0;
+      }
+    .profileHead {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 20%;
+    }
+    .header{
+      color: black;
+      justify-content: center;
+      display: flex;
+      /* left:365px; */
+    }
+    .wrapper{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .profile-form{
+      max-width: 550px;
+      margin: 0 auto;
+      background: lightyellow;
+      padding: 30px;
+      border-radius: 5px;
+
+    }
+
+    .container {
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      display: flex;
+    }
+    .container .btn-holder {
+      justify-content: center;
+      display: flex;
+    }
+
+    button {
+        font-family: "Roboto", sans-serif;
+        border: 1px solid black;
+        bottom: auto;
+        background-color: #008577;
+        color: black;
+        width: 20%;
+        outline: none;
+        font-size: 16px;
+        position: absolute;
+        bottom: 50px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    }

@@ -1,22 +1,4 @@
-<!--
 
-SUGGESTION FOR HOME SCREEN
-SUGGESTION FOR HOME SCREEN
-
-SUGGESTION FOR HOME SCREEN
-SUGGESTION FOR HOME SCREEN
-
-SUGGESTION FOR HOME SCREEN
-SUGGESTION FOR HOME SCREEN
-
-SUGGESTION FOR HOME SCREEN
-SUGGESTION FOR HOME SCREEN
-
-SUGGESTION FOR HOME SCREEN
-SUGGESTION FOR HOME SCREEN
-
-
--->
 
 <!DOCTYPE html>
 <html>
@@ -31,6 +13,27 @@ SUGGESTION FOR HOME SCREEN
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
+
+<script>
+
+    //here I adjust the path
+    //when i click post via the menu it sends the path with the username
+    function getUsername(){
+
+            let data = window.location; //the whole link
+            data = data.toString(); //set it to string
+            let arr = data.split("username="); //split and get the link
+            let username =  arr[arr.length-1];
+
+            let path = "./post.html?username=" + username;
+            $("#post_btn").href(path);
+
+    }
+
+
+</script>
+
+
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <nav class="navbar navbar-inverse navbar-fixed-top" >
@@ -80,13 +83,13 @@ SUGGESTION FOR HOME SCREEN
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" id="post_btn">
                             <i class="fa fa-comments" aria-hidden="true"></i>
                             Chat
                         </a>
                     </li>
                     <li>
-                        <a href="post.html">
+                        <a  href=""  onclick="getUsername()" >
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             Post
                         </a>

@@ -27,11 +27,22 @@ $(document).ready(function () {
                 },
                 success: function (data) {
 
-                    alert(data);
-                    if(data === 'data matched'){
-                        window.location = 'home.html';
+                    // alert(data);
+                    /*
+                      *data is from the php file, I made it send response and username
+                      * so data = 'data match-username' if successful or data = 'try again-username'
+                      * here I split so that i can get username and response separately
+                     */
+                    let arr  = data.split("-");
+                    let response = arr[0];
+                    let username = arr[arr.length-1];
+
+                    alert(response);
+                    if(response === 'data matched'){
+                        window.location = 'home.html?username='+ encodeURIComponent(username); //passed the username with the link, now check home.html at the top
+
                     }
-                    if(data === 'try again'){
+                    if(response === 'try again'){
                         alert('Invalid Credentials')
                     }
 

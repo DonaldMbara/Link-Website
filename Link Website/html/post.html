@@ -26,10 +26,17 @@
     }
 
     function setName(name) {
-        document.querySelector('#courses').innerText = name;
-        document.querySelector('#courses').value = name;
+        // document.querySelector('#courses').innerText = name;
+        document.querySelector('#courses').name = name;
 
     }
+    function setValue(value) {
+        document.querySelector('#courses').innerText = value;
+        document.querySelector('#courses').value = value;
+    }
+
+
+
 
 </script>
 
@@ -103,23 +110,25 @@
 
 
 
+
+
 </textarea>
         <!--I am using value to pass to the database-->
         <div class="dropdown">
             <button class="dropbtn" id="courses" value ="">Courses</button>
             <div class="dropdown-content" id="select_courses">
-                <a class = "Scince" id="COMS" value = "COMS" onclick="setName('COMS')" > COMS</a>
-                <a class = "Scince" id="APPM" onclick="setName('APPM')"> APPM</a>
-                <a class = "Scince" id="PHYSICS" onclick="setName('PHYSICS')">PHYSICS</a>
-                <a class = "Scince" id="MATHEMATICS" onclick="setName('MATHEMATICS')">MATHEMATICS</a>
-                <a class = "Commerce" id="ACCOUNTING SCIENCE" onclick="setName('ACCOUNTING SCIENCE')">ACCOUNTING SCIENCE</a>
-                <a class = "Commerce" id="ECONOMICS" onclick="setName('ECONOMICS')">ECONOMICS</a>
-                <a class = "Commerce" id="FINANCE" onclick="setName('FINANCE')">FINANCE</a>
-                <a class = "Health Science" id="DENTAL SCIENCE"  onclick="setName('DENTAL SCIENCE')"> DENTAL SCIENCE</a>
-                <a class = "Commerce" id="DIGITAL ARTS" onclick="setName('DIGITAL ARTS')">DIGITAL ARTS</a>
-                <a class = "Health Science" id="MEDICINE AND SURGERY" onclick="setName('MEDICINE AND SURGERY')">MEDICINE AND SURGERY</a>
-                <a class = "Health Science" id="PHYSIOTHERAPY" onclick="setName('PHYSIOTHERAPY')"> PHYSIOTHERAPY</a>
-                <a class = "Humanities" id="EDUCATION" onclick="setName('EDUCATION')"> EDUCATION</a>
+                <a class = "Science" id="COMS" value = "COMS"  onclick="setValue('COMS'); setName('1')"> COMS</a>
+                <a class = "Science" id="APPM" onclick="setValue('APPM');setName('1')"> APPM</a>
+                <a class = "Science" id="PHYSICS" onclick="setValue('PHYSICS');setName('1')">PHYSICS</a>
+                <a class = "Science" id="MATHEMATICS" onclick="setValue('MATHEMATICS');setName('1')">MATHEMATICS</a>
+                <a class = "Commerce" id="ACCOUNTING SCIENCE" onclick="setValue('ACCOUNTING SCIENCE');setName('2')">ACCOUNTING SCIENCE</a>
+                <a class = "Commerce" id="ECONOMICS" onclick="setValue('ECONOMICS');setName('2')">ECONOMICS</a>
+                <a class = "Commerce" id="FINANCE" onclick="setValue('FINANCE');setName('2')">FINANCE</a>
+                <a class = "Health Science" id="DENTAL SCIENCE"  onclick="setValue('DENTAL SCIENCE');setName('3')"> DENTAL SCIENCE</a>
+                <a class = "Commerce" id="DIGITAL ARTS" onclick="setName('4');setValue('DIGITAL ARTS');">DIGITAL ARTS</a>
+                <a class = "Health Science" id="MEDICINE AND SURGERY" onclick="setValue('MEDICINE AND SURGERY');setName('3')">MEDICINE AND SURGERY</a>
+                <a class = "Health Science" id="PHYSIOTHERAPY" onclick="setValue('PHYSIOTHERAPY');setName('3')"> PHYSIOTHERAPY</a>
+                <a class = "Humanities" id="EDUCATION" onclick="setValue('EDUCATION');setName('4')"> EDUCATION</a>
 
             </div>
         </div>

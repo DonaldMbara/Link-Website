@@ -3,8 +3,9 @@ $(document).ready(function () {
         e.preventDefault();
 
 
-        let status = $('#status').val();
-        let course = $('.dropbtn').val();
+
+        let status = $('#status').val().trim();
+        let courseid = $('.dropbtn').attr("name");
 
         $(".error").remove(); //removing everything else that is in the span before using it
 
@@ -12,9 +13,11 @@ $(document).ready(function () {
         if (status.length < 1 ) {
             $('#status').after('<span class="error">This field is required</span>');
         }
-        if( course.length < 1) {
+        if( courseid.length < 1) {
             $('#select_courses').after('<span class="error">This field is required</span>');
         }
+
+
 
         //i will dix minor bugs
         $.ajax({
@@ -24,13 +27,15 @@ $(document).ready(function () {
             data: {
                 status: status,
                 author :"Dons",
-                courseid: "1"
+                courseid: courseid
 
             },
             success: function (data) {
 
                 alert(data);
                 if(data === 'Uploaded Successfully'){
+                    $('#status').val("");//clear
+                    document.getElementById("charLength").innerHTML=""; //clear
                 }
 
 
@@ -43,4 +48,5 @@ $(document).ready(function () {
 
 
     });
+
 });

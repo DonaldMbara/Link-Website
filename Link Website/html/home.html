@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/home_style.css">
     <link rel="stylesheet" href="../css/home_style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -31,10 +30,8 @@
             let arr = data.split("username="); //split and get the link
             let username =  arr[arr.length-1];
 
-            let path_to_post = "post.html?username=" + decodeURIComponent(username);
-            let path_to_profile = "profile.html?username=" + decodeURIComponent(username)
-            document.querySelector("#post_id").href = path_to_post ; //set the link of the html page with the username on it
-            document.querySelector("#profile_id").href = path_to_profile ; //set the link of the html page with the username on it
+            let path = "post.html?username=" + decodeURIComponent(username);
+            document.querySelector("#post_id").href = path ; //set the link of the html page with the username on it
 
     }
 
@@ -105,7 +102,7 @@
                         </a>
                     </li>
                     <li >
-                        <a href=""  onclick="getUsername()" id="profile_id">
+                        <a href="profile.html">
                             <i class="fa fa-user" aria-hidden="true"></i>
                             Profile
                         </a>
@@ -116,21 +113,22 @@
     </div>
 </nav>
 
+
 <div class="animation-area">
-    <ul class="box-area">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+  <ul class="box-area">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
 
-    </ul>
+  </ul>
 
-    <div class="header-div">
-        <h1>Welcome to Link</h1>
+  <div class="header-div">
+    <h1>Welcome to Link</h1>
 
-    </div>
+  </div>
 
 </div>
 

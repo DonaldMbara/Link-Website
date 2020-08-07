@@ -6,6 +6,8 @@ $(document).ready(function () {
         let studentNo = $('#login_stdNo').val();
         let password = $('#login_password').val();
 
+
+
         $(".error").remove(); //removing everything else that is in the span before using it
 
         //Checking validation of our inputs
@@ -15,6 +17,8 @@ $(document).ready(function () {
         if( password.length < 1) {
             $('#login_password').after('<span class="error">Password must be at least 8 characters long</span>');
         }
+
+
 
                $.ajax({
                 header: {"Access-Control-Allow-Origin" :"*"},
@@ -40,7 +44,7 @@ $(document).ready(function () {
                     alert(response);
                     if(response === 'data matched'){
                         window.location = 'home.html?username='+ encodeURIComponent(username); //passed the username with the link, now check home.html at the top
-
+                        localStorage.setItem("key", studentNo);
                     }
                     if(response === 'try again'){
                         alert('Invalid Credentials')

@@ -8,7 +8,7 @@ $(document).ready(function (){
 
 
       // document.querySelector("#view_chats").name = username ;
-      let static_studentNumber = 990916;
+      let static_studentNumber = 990816;
     $.ajax({
       header: {"Access-Control-Allow-Origin" : "*"},
       type: "GET",

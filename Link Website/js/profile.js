@@ -1,16 +1,24 @@
 $(document).ready(function (){
 
-    var response = '';
-    let static_studentNumber = 9899;
+      var response = '';
+      let data = window.location; //the whole link
+      data = data.toString(); //set it to string
+      let arr = data.split("username="); //split and get the link
+      let username =  arr[arr.length-1];
+
+
+      document.querySelector("#view_chats").name = username ;
+      let static_studentNumber = $('#view_chats').attr("name");
     $.ajax({
       header: {"Access-Control-Allow-Origin" : "*"},
       type: "GET",
       url: 'https://lamp.ms.wits.ac.za/~s1819369/profile.php',
 
       data: {
-        studentNo : static_studentNumber
+        Username : static_studentNumber
       },
       success : function(output){
+        //alert(static_studentNumber);
         var obj = JSON.parse(output);
         firstname = obj.FirstName;
         surname = obj.LastName;

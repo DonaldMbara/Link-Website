@@ -13,9 +13,9 @@ $(document).ready(function () {
 
         //Checking validation of our inputs
         if (status == "") {
-            $('#status').after('<span class="error">The no question to submit</span>');
+            $('#status').after('<span class="error">There is no question to submit</span>');
         }
-        if( courseid.length < 1) {
+        else if( courseid.length < 1) {
             $('#select_courses').after('<span class="error">This field is required</span>');
         }
 
@@ -37,6 +37,8 @@ $(document).ready(function () {
                     if (data === 'Uploaded Successfully') {
                         $('#status').val("");//clear
                         document.getElementById("charLength").innerHTML = ""; //clear
+                        document.querySelector('#courses').innerText = "Select Course";
+
                     }
 
 

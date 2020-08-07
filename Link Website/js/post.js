@@ -4,9 +4,10 @@ $(document).ready(function () {
 
 
 
+
         let status = $('#status').val().trim();
         let courseid = $('.dropbtn').attr("name");
-        let name = $('#post_btn').attr("name"); //here I made the name to be the name of the button which is the username
+        let name = localStorage.getItem("username");//here I made the name to be the name of the button which is the username
 
         $(".error").remove(); //removing everything else that is in the span before using it
 
@@ -20,14 +21,13 @@ $(document).ready(function () {
 
 
 
-        //i will dix minor bugs
         $.ajax({
             header: {"Access-Control-Allow-Origin" :"*"},
             type: "POST",
             url: 'https://lamp.ms.wits.ac.za/~s1819369/post.php',
             data: {
                 status: status,
-                author :name, 
+                author :name,
                 courseid: courseid
 
             },

@@ -40,6 +40,8 @@ $(document).ready(function () {
                     let arr  = data.split("-");
                     let response = arr[0];
                     let username = arr[arr.length-1];
+                    localStorage.setItem("username", username);
+
 
                     alert(response);
                     if(response === 'data matched'){

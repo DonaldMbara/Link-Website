@@ -36,21 +36,6 @@
     }
 
 
-    //I posted same code and set the post button name with the username
-    //this hepls me in the post.js to access the username via the post button attribute name
-    //go check it out
-    function getUsername(){
-
-        let data = window.location; //the whole link
-        data = data.toString(); //set it to string
-        let arr = data.split("username="); //split and get the link
-        let username =  arr[arr.length-1];
-
-
-        document.querySelector("#post_btn").name = username ;
-
-    }
-
 
 
 </script>

@@ -1,0 +1,8 @@
+[05/08, 19:51] Sikhanyiso: ill be doing view questions n transition to answers
+[05/08, 22:30] Donald: Posting is working with some minor bugs.. I'll fix that tomorrow.
+[05/08, 22:34] Donald: Minor errors are in the backend i sent dummy variables in the database for now.
+[05/08, 22:42] MJ: That¡¯s how we start ??
+[05/08, 22:43] MJ: But it¡¯s looking good so far ?
+[05/08, 23:16] Kaone: It's good man as long as we are striding forward
+[05/08, 23:16] Kaone: I'll start learning HTML tonight
+[05/08, 23:17] Kaone: I have access to PC periodically

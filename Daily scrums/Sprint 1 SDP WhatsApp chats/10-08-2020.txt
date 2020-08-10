@@ -1,0 +1,7 @@
+[10/08, 16:38] Donald: I managed to host it locally using xampp. I guess we safe for now
+[10/08, 16:39] MJ: Did you copy all the tables ?
+[10/08, 16:42] Donald: Yes and scripts.. I only copied for the user stories we going to present.
+[10/08, 16:46] MJ: Ohh okay ??
+[10/08, 16:46] MJ: Thanks man ????
+[10/08, 16:47] Donald: ?? awe bro??
+[10/08, 17:39] Sikhanyiso: can someone who is free help me with with activity diagrams

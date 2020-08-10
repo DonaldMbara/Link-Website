@@ -1,0 +1,2 @@
+[23/07, 17:54] Sikhanyiso: im done with continuous intergration someone can pull the project and run the dummy test i left there and see if it runs
+[23/07, 17:55] Donald: ??

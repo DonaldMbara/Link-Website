@@ -1,0 +1,48 @@
+[04/08, 09:58] Donald: Oh okay. Thanks
+[04/08, 10:08] Donald: If y'all ain't sure about what to do,  you can do any part of the project then we'll link everything later on
+[04/08, 10:34] MJ: Cool, what are you handling at the moment
+[04/08, 10:35] Donald: I am handling the JavaScript backend part for login and registration
+[04/08, 10:37] Mulisa: Try the solution I proposed, google something like allow access control origin on php
+[04/08, 10:38] Donald: Okay thank you..
+[04/08, 10:39] MJ: Oh okay 
+[04/08, 21:29] Donald: Thanks man. Forgot to update you. It worked
+
+
+Login and registration is working.
+
+With the home screen. Anyone with a suggestion? Or anyone working on it? You can also check home.html it's my suggestion, but anyone can come up with an alternative
+[04/08, 21:32] Donald: I'll be looking at posting  if no one is doing that part.
+
+I hope y'all are working too. You've been quiet lately.
+[04/08, 21:53] MJ: I’m still going through some vids online
+[04/08, 21:56] MJ: I checked it on my side it looks good man
+[04/08, 21:58] MJ: When you sign in done it send you to this home ?
+[04/08, 22:01] Donald: No problem.. i thought you doing the event thing
+[04/08, 22:01] Donald: Yes. It's a suggestion
+[04/08, 22:02] MJ: Oh that’s done I’ll push using that night data, I keep forgetting
+[04/08, 22:02] MJ: It looks clean to me 
+[04/08, 22:02] Donald: Okay.. just mention everything you do here so that when we do scrum we copy and paste relevant messages
+[04/08, 22:03] MJ: Okay cool
+[04/08, 22:03] Donald: Awe
+[04/08, 22:04] MJ: So the log in should take to to the home neh ?
+[04/08, 22:10] Donald: Not yet.I am failing to link it with the login for now even thou the path is correct.. i am using 
+*window.location.href = path* after a successful login.
+[04/08, 22:11] MJ: Oh damn  eish alright
+[04/08, 22:12] MJ: And it didn’t work with just window.location ? 
+[04/08, 22:15] Donald: It still takes me to /404 not found page/
+[04/08, 22:16] Donald: But if you figure it out along the way sort it out
+[04/08, 22:17] MJ: Cool lemme try it
+[04/08, 22:23] Donald: Oh.. the reason was that i am doing that inside the home folder so there is not need to include it in the path
+[04/08, 22:24] Donald: It is working. I'll push
+[04/08, 22:24] MJ: Okay sweet
+[04/08, 22:40] MJ: What can we show on the home page , the blank part
+[04/08, 22:44] Donald: Ya man. i am not sure yet.. but if you think of something that's cool
+[04/08, 22:48] Donald: It's just like a landing page neh?
+[04/08, 22:48] Donald: Yaa.. you can look some templates on that
+[04/08, 22:48] MJ: Yup
+[04/08, 22:56] Donald: https://www.google.com/url?sa=i&url=https%3A%2F%2Fcolorlib.com%2Fwp%2Flanding-page-templates%2F&psig=AOvVaw1hJmajm9KYQoru890XV4-l&ust=1596660130009000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJDe-dW3gusCFQAAAAAdAAAAABAD
+[04/08, 22:56] Donald: 
+[04/08, 22:57] MJ: Those are really cool 
+[04/08, 22:57] Donald: https://colorlib.com/wp/wp-content/uploads/sites/2/apps-craft-html-app-landing-page-template.jpg
+[04/08, 22:59] MJ: And show some android availability 
+[04/08, 22:59] Donald: Ya that would be cool

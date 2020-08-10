@@ -1,0 +1,7 @@
+[14/07, 07:00] Sikhanyiso: So for coding the website I would suggest that we have a look at
+frameworks like Django an others they have some of the stuff built in, they help organize  the project in one place, they are really easy to work with so its worth looking into them and deciding from there.
+[14/07, 08:55] Donald: I'll check Django out
+[14/07, 09:56] Mongezi: did anyone send rylan the email with group names?
+[14/07, 11:14] Donald: Not yet, we wanted to know if everyone is sorted
+[14/07, 11:15] Donald: Okay thanks
+[14/07, 11:16] Donald: I guess you can send ... I do have a device too

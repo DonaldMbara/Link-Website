@@ -1,0 +1,19 @@
+[03/08, 08:50] Donald: Hey guys. We can get started with our project , right?
+[03/08, 11:32] Donald:  where's everyone?... I could be the only one left here doing the project while people are already in other groups wonders never end
+[03/08, 11:41] Kaone: Yah sure
+[03/08, 11:41] Kaone: I found temporary fix to laptop problem
+[03/08, 11:42] Kaone:  they are sleeping
+[03/08, 11:42] Donald: That's great. Would it survive  for some months?
+[03/08, 11:42] Kaone: Yah I suppose.
+[03/08, 11:45] Donald:  the website thing won't be easy as we think.. we really have to work extremely hard together
+[03/08, 11:53] Mongezi: eish
+[03/08, 15:10] Donald: Okay I've done some stuff ... You can pull the code from GitHub. There's a home page code just for suggestion. It has top nav menu instead of the bottom nav the one we used in the app.
+
+I'll do the login and registration backend part later tonight.
+[03/08, 15:11] Donald: Akere we just copying the app right?.. because that's what i am doing
+[03/08, 15:15] Mongezi: yeah that’s what we’re doing
+[03/08, 16:08] Kaone: It's splendid
+[03/08, 16:54] MJ: Niceeee 
+[03/08, 16:55] Mongezi: where would we be without donald
+[03/08, 17:21] Sikhanyiso: Word
+[03/08, 18:53] Donald: Ai let's push guys

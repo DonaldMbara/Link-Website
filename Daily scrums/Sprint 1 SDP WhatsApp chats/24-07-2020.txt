@@ -1,0 +1,24 @@
+[24/07, 10:26] Donald: Hey guys. Basically what we doing with the website is to replicate our app right? So the question is about the database, in my mind I have been thinking that it would be easier with us by just connecting to the wits lamp   instead of starting from the ground. My question is, how are we gonna do that??.. in Android we know that we use a link, but what about here??
+
+
+ who's doing what in terms of user stories. I've done some replica of the login/registration of the app (but if anyone has done it or feels like they wanted to do it, it's chilled, you can takeover) but I am still figuring out a way to link the php files in lamp instead of redoing them.
+
+@?Mulisa?  what could you say about the backend part? Or anything???
+[24/07, 10:28] Donald: How's the booking part going . Do you need a hand?
+[24/07, 10:37] MJ: Who is doing that part ??
+[24/07, 10:37] MJ: Mulisa said it¡¯s possible so maybe he can give us a hand ?
+[24/07, 10:37] Donald: ?? thought you doing it
+[24/07, 10:38] Donald: Okay????¡á?
+[24/07, 10:38] MJ: ???¡á? I didn¡¯t know ??
+[24/07, 10:38] MJ: Let me give it a swing
+[24/07, 10:40] Donald: ?? i was misled by this??.. i should stop assuming
+[24/07, 10:40] MJ: Ohhh no that was on the android side ???
+[24/07, 10:41] Donald: Oh ya I am talking about the last user story on Android?
+[24/07, 10:43] MJ: Ohhh okay ?? i did that last part but now I just made it to update events in sort of ¡®real time¡¯ , and I have to add a function that chooses availability since default is unavailable, I¡¯ll handle it it¡¯s cool ??
+[24/07, 10:43] MJ: Rylan said the sprint is on 11 august ?
+[24/07, 10:45] Donald: Oh? sweet i was thinking mybe it's on Monday???¡á?? nice
+[24/07, 10:45] MJ: I asked him today ??
+[24/07, 10:45] Donald: ???? great?
+[24/07, 10:45] Donald: I was wondering why y'all are chilled??
+[24/07, 10:47] MJ: Eish no Mina i was handling some stuff this week, tomorrow im definitely going full force ????
+[24/07, 10:48] MJ: @?Sikhanyiso? can you help out? I see the code cov build fails but Travis passes, do you know what might be the problem

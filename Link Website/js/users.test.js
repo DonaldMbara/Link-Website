@@ -1,3 +1,4 @@
+const returnOnError = require('./users');
 test('returns the result if no error was thrown', () => {
   expect(returnOnError(() => 'foo', 'bar')).toEqual('foo');
 });

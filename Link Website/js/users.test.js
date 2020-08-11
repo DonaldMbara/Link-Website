@@ -1,4 +1,4 @@
-const { sum, positive, negative } = require('./math-utils');
+const { sum, positive, negative } = require('./users');
 
 let vals;
 let sum_of_vals;

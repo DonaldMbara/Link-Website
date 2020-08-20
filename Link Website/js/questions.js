@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    var courseid= 1;
+    var courseid= localStorage.getItem("c_id");
     var querySet;
-    var userid = 12345678;
+    var userid = localStorage.getItem("key");
 
     //this loads all the questions from the selected course.
     $.ajax({

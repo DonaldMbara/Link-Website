@@ -29,6 +29,12 @@
 
     }
 
+    function sendCourseId(id) {
+        let value1 = localStorage.setItem("c_id", id);
+
+
+    }
+
 
 
 </script>
@@ -49,36 +55,58 @@
         <div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown" id = "#section1">
+                    <li class="dropdown" >
                         <a class="dropdown-toggle" data-toggle="dropdown"  href="#">
                             <i class="fa fa-list" aria-hidden="true"></i>
                             Post Feed
                             <span class="caret"></span></a>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-submenu">
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                     SCIENCE
                                     <span class="caret"></span></a>
-                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="questions.html" onclick="sendCourseId(1)">COMS</a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(2)">APPM</a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(3)">MATHEMATICS </a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(4)">PHYSICS</a></li>
+
+                                </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown-submenu">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                     COMMERCE
                                     <span class="caret"></span></a>
                                 </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="questions.html" onclick="sendCourseId(5)">ACCOUNTING SCIENCE</a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(6)">ECONOMICS </a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(7)">FINANCE</a></li>
+                                </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown-submenu">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                     HEALTH SCIENCE
                                     <span class="caret"></span></a>
                                 </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="questions.html" onclick="sendCourseId(8)">PHYSIOTHERAPY</a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(9)">DENTAL SCIENCE</a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(10)">MEDICINE AND SURGERY</a></li>
+                                </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown-submenu" >
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                     HUMMANITIES
                                     <span class="caret"></span></a>
                                 </a>
+                                <ul class="dropdown-menu" >
+                                    <li><a href="questions.html" onclick="sendCourseId(11)">DIGITAL ARTS</a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(12)">EDUCATION</a></li>
+
+
+                                </ul>
                             </li>
                         </ul>
                     </li>

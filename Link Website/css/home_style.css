@@ -5,7 +5,15 @@ body {
     background: linear-gradient(to left, #8942a8, #ba382f );
 }
 
+.dropdown-submenu {
+    position: relative;
+}
 
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
 
 #Post-feed {
     padding-top:50px;

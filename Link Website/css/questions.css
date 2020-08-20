@@ -1,0 +1,63 @@
+
+body {
+    position:relative;
+}
+
+#Chat {
+    padding-top:50px;
+    height:500px;
+    color: #fff;
+    background-color: #1E88E5;
+}
+
+#Post {
+    padding-top:50px;
+    height:500px;
+    color: #fff;
+    background-color: #1E88E5;
+}
+#Profile {
+    padding-top:50px;
+    height:500px;
+    color: #fff;
+    background-color: #1E88E5;
+
+}
+#search-container{
+  padding-top:10px;
+  margin-left: 74.15%;
+}
+#results {
+ position: absolute;
+ width: 100%;
+ max-width:200px;
+ cursor: pointer;
+ overflow-y: auto;
+ max-height: 400px;
+ box-sizing: border-box;
+ z-index: 1001;
+ background-color: #071e1c;
+}
+
+#question_content{
+  text-align: center;
+}
+
+#question-page{
+  margin-top: 60px;
+}
+  #cont{
+    padding-left: 200px;
+    padding-bottom: 5px;
+    padding-right: 200px;
+  }
+  .card{
+    background-color:#09736b;
+    padding: 10px;
+  }
+  #like_button{
+     margin-left:93%;
+  }
+#question_p{
+  border-bottom: 1px solid;
+}

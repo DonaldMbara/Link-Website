@@ -1,0 +1,86 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+body {
+  position:relative;
+    background-color: #008577;
+}
+
+#Chat {
+    padding-top:50px;
+    height:500px;
+    color: #fff;
+    background-color: #1E88E5;
+}
+
+#Post {
+    padding-top:50px;
+    height:500px;
+    color: #fff;
+    background-color: #1E88E5;
+}
+#Profile {
+    padding-top:50px;
+    height:500px;
+    color: #fff;
+    background-color: #1E88E5;
+
+}
+
+
+#answer-box{
+  width: 400px;
+  z-index: 50%;
+  margin-right: 20px;
+  position: fixed;
+  top:50%;
+  left:60%;
+}
+
+#like_button{
+  float: right;
+}
+
+.like_button{
+  float:right;
+}
+
+.question_content{
+  width: 100%;
+  text-align: center;
+}
+.answer_card{
+  background-color:#19665f;
+}
+#cont{
+  margin-top: 60px;
+  margin-left:10px;
+  margin-right: 80px;
+  border-bottom: 2px solid;
+}
+#cont-answer{
+  float: left;
+  width: 55%;
+  margin-right:15px;
+  margin-left: 10px;
+}
+#comment_input{
+  float: left;
+}
+#answer_content{
+  text-align: center;
+}
+#comment_button{
+  float: right;
+}
+#comment-box{
+  float: left;
+  width:600px;
+}
+.hidden{
+    visibility: hidden;
+}
+
+#comment_p{
+  border-bottom: 1px solid;
+  width :560px;
+}

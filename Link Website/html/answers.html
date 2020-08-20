@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--You can host everything locally instead-->
+    <title>Link Website questions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <!--loading jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--Bootstrap-->
+
+    <link rel="stylesheet" type="text/css" href="../css/answers.css">
+
+
+
+    <!--js file-->
+    <script type="text/javascript" src="../js/answers.js"></script>
+    <!--handlebars-->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <!--Here we prevent the browser back button-->
+    <script type="text/javascript">
+        function preback() { window.history.forward();}
+        setTimeout("preback()",0);
+
+        window.onload = function () {null};
+
+    </script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+   <nav class="navbar navbar-inverse navbar-fixed-top" >
+       <div class="container-fluid" style="color: #008577">
+           <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" id="topName" href="#">Link Online Tutoring</a>
+           </div>
+           <div>
+               <div class="collapse navbar-collapse" id="myNavbar">
+                   <ul class="nav navbar-nav">
+                       <li>
+                           <a href="#">
+                               <i class="fa fa-comments" aria-hidden="true"></i>
+                               Chat
+                           </a>
+                       </li>
+                       <li>
+                           <a href="post.html">
+                               <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                               Post
+                           </a>
+                       </li>
+                       <li >
+                           <a href="#">
+                               <i class="fa fa-user" aria-hidden="true"></i>
+                               Profile
+                           </a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+   </nav>
+
+   <div class = "container", id="answer-box">
+       <textarea id="answer_input"class="answer_input"cols="30" rows="4" name="comment-box" maxlength="1000" placeholder=" write a answer..."
+             onfocus='(this.style.backgroundColor="lightyellow")'
+             style="resize: none; width: 400px; height: 150px;"></textarea>
+         <button id="answer_button", type="button answer_button">answer</button>
+     </div>
+
+        <div class="container", id="cont">
+          <div class="card question_card"  id ="id">
+            <p class="author"></p>
+            <p class="question_content"></p>
+            <i class="fa fa-thumbs-up like_button" id="like_button" title="like"s></i>
+            <p class="date inline"></p>
+         </div>
+
+     </div>
+      <script id="answers_template" type="text/x-handlebars-template">
+      {{#each this}}
+        <div class="container", id="cont-answer">
+          <div class="card answer_card"  id ="{{this.REPLY_ID}}">
+            <h5 id="answer_content" class="answer_content">{{this.REPLY}}</h5>
+            <i class="fa fa-thumbs-up inline" id="like_button" title="like">{{this.REPLY_LIKES}}</i>
+            <p id="author">{{this.AUTHOR}}</p>
+      </div>
+      <div class="container hidden" , id="comment-box">
+      <textarea id="comment_input" ,cols="30" rows="4"class="comment_input" name="comment-box" maxlength="100" placeholder="write a comment..."
+                onfocus='(this.style.backgroundColor="lightyellow")'
+                style="resize: none; width: 480px; height: 30px;"></textarea>
+
+      <button type="button comment_button" id="comment_button">comment</button>
+      <p id="comment-tag">comments</p>
+      <div class="comments_holder" id="comments_holder"></div>
+    </div>
+
+  </div>
+     {{/each}}
+    </script>
+</body>
+</html>

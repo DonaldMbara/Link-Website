@@ -9,10 +9,10 @@ $(document).ready(function () {
 
             $.each(data, function (key, value) {
 
-                username += '<tr>' ;
+                username += '<div class="w3-container w3-left-align w3-padding-10 " style="background-color: lightyellow;">'+ '<tr>' ;
                 username += '<td>' + ' <a href="#"><li>'+
                     value.Username  + '</li></a> '+'</td>' ;
-                username += '</tr>';
+                username +=  '</tr>' + '</div>';
             });
 
             //INSERTING ROWS INTO TABLE

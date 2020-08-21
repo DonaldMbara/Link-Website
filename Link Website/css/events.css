@@ -1,0 +1,47 @@
+#table {
+    font-size: large;
+    border:  5px solid white;
+    float: left;
+    width: 250px;
+
+
+}
+
+#topname{
+    position: fixed;
+    background-color: #008577;
+    text-align: center;
+    width: 100%;
+
+}
+
+.contents{
+  color: green;
+  justify-content: center;
+  display: flex;
+
+}
+.wrapper{
+  position: relative;
+  position:
+  top: 50%;
+  /* transform: translateY(-90%); */
+  /* transform: translateX(10%); */
+  width: 100%;
+  padding: 0 20px;
+}
+
+.appoint-form{
+  max-width: 550px;
+  margin: 0 auto;
+  background: #b0e5ff;
+  padding: 30px;
+  border-radius: 5px;
+
+}
+
+
+body {
+    background: #008577;
+
+}

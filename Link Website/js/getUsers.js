@@ -1,9 +1,7 @@
 $(document).ready(function () {
 
-    $('#table tr').click(function() {
-        $('#user_chat').html('dtfyguh');
 
-    });
+
 
 
     $.getJSON("https://lamp.ms.wits.ac.za/~s1819369/getNames.php",
@@ -12,10 +10,10 @@ $(document).ready(function () {
             var username = '';
 
             $.each(data, function (key, value) {
-
+                let name = value.Username;
                 username += '<div class="w3-container w3-left-align w3-padding-10 " style="background-color: lightyellow;">'+
                     '<tr>' ;
-                username += '<td ">' + ' <a href="#" ><li>'+
+                username += '<td ">' + ' <a href="#" onclick="getName(name)" ><li>'+
                     value.Username  + '</li></a> '+'</td>' ;
                 username +=  '</tr>' + '</div>';
             });
@@ -28,4 +26,5 @@ $(document).ready(function () {
 
 
 })
+
 

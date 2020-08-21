@@ -12,27 +12,42 @@
 <script type="text/javascript" src = "../js/getUsers.js"></script>
 
 <body>
-<div class="w3-container" id="topname">
-    <h2>Link Users
-        <hr>
-    </h2>
 
-</div>
+<script>
+    function getName(name){
+        $('#name').html(name);
+    }
+</script>
+<h2  >Link Users
+    <hr>
+</h2>
 <div class="w3-container" id="container" >
 
     <ul class="w3-ul w3-hoverable" >
-    <table id="table" >
-        <tr >
+        <div class="search-container">
+                <input type="text" placeholder="Search.." name="search">
+        </div>
+        <div id="table">
+            <table  >
 
-        </tr>
-    </table>
+            </table>
+    </div>
+
     </ul>
-
+    <p id="name" style="text-align: center" >Loading name...</p>
+    <div class="message-box">
+        <div class="type_msg">
+            <div class="input_msg_write">
+                <input type="text" class="write_msg" placeholder="Type a message" />
+                <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="message">
 
-</div>
+
+
 
 
 

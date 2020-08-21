@@ -15,7 +15,8 @@
 
 <script>
     function getName(name){
-        $('#name').html(name);
+        let element = document.getElementById("name");
+        element.innerHTML = name.toString();
     }
 </script>
 <h2  >Link Users
@@ -24,9 +25,7 @@
 <div class="w3-container" id="container" >
 
     <ul class="w3-ul w3-hoverable" >
-        <div class="search-container">
-                <input type="text" placeholder="Search.." name="search">
-        </div>
+
         <div id="table">
             <table  >
 
@@ -34,12 +33,26 @@
     </div>
 
     </ul>
-    <p id="name" style="text-align: center" >Loading name...</p>
     <div class="message-box">
+        <div>
+            <h2 id="recName">Loading name...</h2>
+            <hr>
+        </div>
+        <div>
+            <script id="message_template" type="text/x-handlebars-template">
+                {{#each this}}
+                    <div class="container", id="cont-answer">
+                        <div class="card message_card"  id ="{{this.REPLY_ID}}">
+                            <h5 id="message_content" class="message_content">{{this.REPLY}}</h5>
+                            <p id="author">{{this.AUTHOR}}</p>
+                        </div>
+                {{/each}}
+            </script>
+        </div>
         <div class="type_msg">
             <div class="input_msg_write">
-                <input type="text" class="write_msg" placeholder="Type a message" />
-                <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                <input class="message_input" id="message_input" type="text" class="write_msg" placeholder="Type a message" />
+                <button class="msg_send_btn" id="send_message" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
             </div>
         </div>
     </div>

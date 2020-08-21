@@ -1,0 +1,52 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+
+/* #wrapper{
+  justify-content: center;
+} */
+
+#table {
+    position: absolute;
+    font-size: large;
+    border:  5px solid white;
+    float: left;
+    width: 250px;
+    transform: translateY(3.3%);
+    background: lightyellow;
+    opacity: 1;
+
+}
+
+
+
+#events-page{
+  margin-top: 60px;
+}
+  #cont{
+    position: relative;
+    padding-left: 50px;
+    padding-bottom: 5px;
+    padding-right: 50px;
+    width: 800px;
+
+  }
+  .card{
+    background:#b0e5ff;
+    padding: 50px;
+    border: 2px solid lightyellow;
+    border-radius: 10px 10px;
+    opacity: 0.98;
+  }
+  #topname{
+      position: fixed;
+      background-color: #b0e5ff;
+      text-align: center;
+      height: 8.5%;
+      width: 100%;
+  }
+
+
+body {
+    background-image: url(../image/events.jpg);
+    /* background: #008577; */
+}

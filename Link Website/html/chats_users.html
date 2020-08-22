@@ -3,13 +3,16 @@
 <title>Chats</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../css/list_users.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src = "../js/getUsers.js"></script>
+<script type="text/javascript" src="../js/sendMessages.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/messages_style.css">
+
 
 <body>
 
@@ -27,32 +30,71 @@
     <ul class="w3-ul w3-hoverable" >
 
         <div id="table">
-            <table  >
-
-            </table>
+            <table></table>
     </div>
 
     </ul>
     <div class="message-box">
-        <div>
-            <h2 id="recName">Loading name...</h2>
-            <hr>
-        </div>
-        <div>
-            <script id="message_template" type="text/x-handlebars-template">
-                {{#each this}}
-                    <div class="container", id="cont-answer">
-                        <div class="card message_card"  id ="{{this.REPLY_ID}}">
-                            <h5 id="message_content" class="message_content">{{this.REPLY}}</h5>
-                            <p id="author">{{this.AUTHOR}}</p>
+        <h1 id="recName">Loading name...</h1>
+        <div class="chatbox">
+                <form name="form" id ="sending_message" method="post" >
+                    <div class="chatlogs">
+
+                        <div class="chat friend">
+                            <div class="user-photo" ></div>
+                            <p class="chat-message">Wola bathini mjita!!!</p>
                         </div>
-                {{/each}}
-            </script>
-        </div>
-        <div class="type_msg">
-            <div class="input_msg_write">
-                <input class="message_input" id="message_input" type="text" class="write_msg" placeholder="Type a message" />
-                <button class="msg_send_btn" id="send_message" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+
+                        <div class="chat self">
+                            <div class="user-photo"></div>
+                            <p class="chat-message">Moja</p>
+                        </div>
+
+                        <div class="chat friend">
+                            <div class="user-photo"></div>
+                            <p class="chat-message">Isaiah Rashad McClain (born May 16, 1991), is an American rapper and record producer from Chattanooga, Tennessee.
+
+                                He began rapping seriously as a sophomore in high school with his friends. In 2012 he got his first big break when he toured alongside the likes of Juicy J, Joey Bada$$, and Smoke DZA on the Smoker’s Club Tour.
+
+                                He also founded his hip-hop collective alongside fellow Chattanooga rapper YGTUT. The two released Rashad’s first mixtape Welcome to the Game, also known as Pieces of a Kid, in 2013. In March of the same year, Rashad signed to Top Dawg Entertainment.
+
+                                In 2014, he released his first extended play Cilvia Demo with all star features from fellow TDE members including SZA, Jay Rock, and ScHoolboy Q.
+
+                                After the release of Cilvia Demo, Rashad struggled with drug addiction and depression. Although he had struggled previously as described throughout Cilvia Demo, his abuse and mental health issues became so bad he almost got dropped from TDE.
+
+                                On September 2, 2016, he released his debut studio album, The Sun’s Tirade to critical acclaim. The album again featured guest appearances from TDE members including Zacari, Kendrick Lamar, SZA, as well as non-TDE-affiliate Mike WiLL Made-It as a producer.
+
+                                In March of 2018, Rashad said he would drop an album in the coming summer, however he did not. Then, in September, Rashad tweeted he would not update fans how his project was coming together, but confirmed he was continuing working on it</p>
+                        </div>
+
+
+
+                        <div class="chat self">
+                            <div class="user-photo"></div>
+                            <p class="chat-message">Moja</p>
+                        </div>
+
+                        <div class="chat friend">
+                            <div class="user-photo"></div>
+                            <p class="chat-message">Wola bathini mjita!!!</p>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="chat-form">
+                        <textarea id="message_input" placeholder="Type in your message here..."></textarea>
+
+                        <input class="button"  type="submit"  value="Send" id="send_message" >
+
+                    </div>
+
+                </form>
+
+
+
             </div>
         </div>
     </div>

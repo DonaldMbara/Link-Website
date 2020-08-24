@@ -6,9 +6,6 @@ body{
 .form .message{
     margin: 15px 0 0 ;
 }
-::placeholder {
-    color: white;
-}
 
 .form .message a{
     color: lawngreen;

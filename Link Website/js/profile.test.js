@@ -5,12 +5,12 @@ jest
 var $ = require('jquery');
 window.$ = $;
 var fs = require('fs');
-var jqueryT = fs.readFileSync('Link Website/js/register.js'); //this imports the file i want to test
+var jqueryT = fs.readFileSync('Link Website/js/profile.js'); //this imports the file i want to test
 
-var html = fs.readFileSync('Link Website/html/register.html','utf-8');
+var html = fs.readFileSync('Link Website/html/profile.html','utf-8');
 describe('validateSubmits', function() {
   it('shows/hides error banner', function() {
-     question = require('./register.js'); //this imports the file i want to test
+     question = require('./profile.js'); //this imports the file i want to test
     const scriptEl = window.document.createElement('script');
     scriptEl.textContent = jqueryT;
     window.document.body.appendChild(scriptEl);

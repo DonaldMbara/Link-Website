@@ -24,9 +24,8 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "Link Website/**/main.js",
-      "Link Website/**/users.js" ,  
-      "Link Website/**/app-users.js" ]
+      "Link Website/**/*.js"
+ ]
   },
   "dependencies": {
     "fs": "0.0.1-security",

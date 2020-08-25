@@ -36,6 +36,7 @@ $(document).ready(function () {
           var name = row.find("td:eq(0)").text();
           // window.location("events.html");
           getEvent(name);
+          window.scrollTo(0,0);
         });
 
         // getEvent("Marcel");

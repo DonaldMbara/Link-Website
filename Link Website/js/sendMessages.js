@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+
+
+
     $.getJSON("https://lamp.ms.wits.ac.za/~s1819369/getNames.php",
 
         function (data) {
@@ -9,10 +12,11 @@ $(document).ready(function () {
 
 
                 username +=
-                    '<tr>' ;
-                username += '<td >' +
+                    '<tr >'  ;
+                username += '<td  >' +
                     value.Username  +'</td>';
-                username += '<td>' + '<button class="ebtn">' + 'View</button>' + '</td>';
+                username += '<td>' + '<button class="ebtn">' + 'Chat</button>' + '</td>';
+                username += '<td style="color: lightyellow;">' + value.StudentNo +  '</td>>';
                 username +=  '</tr>';
             });
 
@@ -23,11 +27,15 @@ $(document).ready(function () {
     $('#table').on('click', '.ebtn', function(){
         //alert("Marcel");
         var row= $(this).closest("tr");
-        var name = row.find("td:eq(0)").text();
+        var name =  row.find("td:eq(0)").text();
+        var studentNo = row.find("td:eq(2)").text();
         // window.location("events.html");
         document.getElementById("recName").innerHTML = name; //set username
         localStorage.setItem("uName",name);
+        localStorage.setItem("uStdNo",studentNo);
+
         // alert(name);
+
     });
 
 
@@ -39,7 +47,7 @@ $(document).ready(function () {
 
         let sender_name = localStorage.getItem("username");
         let receiver_name = localStorage.getItem("uName");
-        let receiver_stud = '';
+        let receiver_stud = localStorage.getItem("uStdNo");
         let sender_stud =  localStorage.getItem("key");
         let message = document.getElementById("message_input").value;
 
@@ -78,6 +86,32 @@ $(document).ready(function () {
         }
 
     });
+
+
+
+    function getMessage(sStudentNo, rStudentNo) {
+
+        sStudentNo = localStorage.getItem("key");
+        rStudentNo = localStorage.getItem("uStdNo");
+        $.ajax({
+            header: {"Access-Control-Allow-Origin" :"*"},
+            type: 'GET',
+            url:'https://lamp.ms.wits.ac.za/~s1819369/fetch_messages.php',
+            data:{
+                id:sStudentNo,
+                userid:rStudentNo
+            },
+            datatype:'json',
+            success: function (data, status){
+                alert(data);
+            }
+
+        });
+
+
+
+    }
+
 
 
 

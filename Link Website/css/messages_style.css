@@ -12,11 +12,14 @@ body{
 .chatbox{
     /*width: 500px;*/
     /*min-width: 390px;*/
-    height: 550px;
-    background: #ffffff;
-    padding: 25px;
-    margin: 20px auto;
-    box-shadow: 0 3px #cccccc;
+    float: right;
+    width: 100%;
+    height: 620px;
+    border: 5px solid white;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .chatlogs{
     padding: 10px;

@@ -26,6 +26,7 @@ $(document).ready(function () {
 
     $('#table').on('click', '.ebtn', function(){
         //alert("Marcel");
+
         var row= $(this).closest("tr");
         var name =  row.find("td:eq(0)").text();
         var studentNo = row.find("td:eq(2)").text();
@@ -33,6 +34,10 @@ $(document).ready(function () {
         document.getElementById("recName").innerHTML = name; //set username
         localStorage.setItem("uName",name);
         localStorage.setItem("uStdNo",studentNo);
+
+
+
+
 
         // alert(name);
 
@@ -88,30 +93,44 @@ $(document).ready(function () {
     });
 
 
+    $('#table').on('click', '.ebtn', function(){
 
-    function getMessage(sStudentNo, rStudentNo) {
 
-        sStudentNo = localStorage.getItem("key");
-        rStudentNo = localStorage.getItem("uStdNo");
-        $.ajax({
-            header: {"Access-Control-Allow-Origin" :"*"},
-            type: 'GET',
-            url:'https://lamp.ms.wits.ac.za/~s1819369/fetch_messages.php',
-            data:{
-                id:sStudentNo,
-                userid:rStudentNo
-            },
-            datatype:'json',
-            success: function (data, status){
-                alert(data);
-            }
 
+
+        let receiver_stud = localStorage.getItem("uStdNo");
+        let sender_stud = localStorage.getItem("key");
+
+        //alert(receiver_stud);
+
+            $.ajax({
+                header: {"Access-Control-Allow-Origin" :"*"},
+                datatype:'json',
+                type: "POST",
+                url: 'https://lamp.ms.wits.ac.za/~s1819369/fetch_messages.php',
+                data:{id: sender_stud,
+                    userid: receiver_stud},
+                success: function (data, status) {
+
+
+                    var data = jQuery.parseJSON(data);
+                    var source = $("#chats_template").html();
+                    var template = Handlebars.compile(source);
+                    $('.chatlogs').append(template(data));
+
+                }
         });
 
 
 
-    }
 
+
+
+
+
+        // alert(name);
+
+    });
 
 
 

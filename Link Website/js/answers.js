@@ -54,7 +54,6 @@ $('body').on('click', '.like_button',function(e) {
     data:{id:post_id, userid:userid},
     success: function (data, status) {
         $(this).val(data.likes);
-        window.location.reload(true);
 
        }
      });

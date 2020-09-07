@@ -2,7 +2,7 @@ $(document).ready(function (){
 
 
         let uStudent = localStorage.getItem("uStdNo")
-
+        let uName = localStorage.getItem("uName");
         $.ajax({
             header: {"Access-Control-Allow-Origin" : "*"},
             type: "GET",
@@ -23,6 +23,8 @@ $(document).ready(function (){
                 $('#text1').html("LastName : ".concat(surname));
                 $('#text3').html("Username : ".concat(username));
                 $('#text4').html("Email : ".concat(e_mail));
+                $("#profile_header").text(uName + "'s Profile");
+
 
 
             }

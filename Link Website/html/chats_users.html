@@ -40,6 +40,7 @@
     </ul>
     <div class="message-box">
         <h1 id="recName">Loading name...</h1>
+        <input type="button" onclick="location.href='../html/user_profile.html';" value="View Profile" />
         <div class="chatbox">
                 <form name="form" id ="sending_message" method="post" >
                     <div class="chatlogs">
@@ -48,8 +49,8 @@
                             {{#each this}}
                                 <div class="container", id="cont">
                                     <div class="card message_card"  id ="{{message_id}}">
-                                        <P id ="message",placeholder = "message"><h2>{{message}}</h2></P>
-                                        <P id="sender", placeholder = "sender"><h3>{{sender}}</h3></P>
+                                        <P id ="message",placeholder = "message"><h4 id><i>{{message}}</i></h4></P>
+                                        <P id="sender", placeholder = "sender"><h6><strong>{{sender}}</strong></h6></P>
                                         <P id="time", placeholder = "--:--">{{time}}</P>
                                         <p class="inline" id="date">{{date}}</p>
                                     </div>

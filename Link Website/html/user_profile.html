@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Profile Page</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -9,37 +9,21 @@
     <meta name = "viewport" content="width-device-width, initial-scale=1">
     <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src = "../js/profile.js"></script>
+    <script type="text/javascript" src = "../js/user_profile.js"></script>
 
 
-  </head>
+</head>
 
-  <body>
-
-  <script>
-    function getUsername(){
-
-      let data = window.location; //the whole link
-      data = data.toString(); //set it to string
-      let arr = data.split("username="); //split and get the link
-      let username =  arr[arr.length-1];
-
-      let path = "home.html?username=" + decodeURIComponent(username);
-      path = path.toString();
-      return path ; //set the link of the html page with the username on it
-
-    }
+<body>
 
 
-  </script>
 
+<div class="header">
+    <h1>My Profile</b></h1>
+</div>
 
-    <div class="header">
-        <h1>My Profile</b></h1>
-    </div>
-
-    <div class="wrapper">
-      <div id="prof-from" class="profile-form">
+<div class="wrapper">
+    <div id="prof-from" class="profile-form">
 
 
         <div>
@@ -51,46 +35,46 @@
 
 
         <div id="text1" class="contents">
-          surname Loading...
+            surname Loading...
 
         </div>
 
         <div id="text2" class="contents">
-          firstname Loading...
+            firstname Loading...
 
         </div>
 
         <div id="text3" class="contents">
-          username Loading...
+            username Loading...
 
         </div>
 
         <div id="text4" class="contents">
-          email Loading...
+            email Loading...
 
         </div>
-
-
-
-      </div>
 
 
 
     </div>
 
-    <div class="container">
-  <div class="btn-holder">
+
+
+</div>
+
+<div class="container">
+    <div class="btn-holder">
 
         <!-- This will direct to chats, for now its the home page -->
 
 
 
-            <button id="view_chats"  onclick="window.location = '../html/chats_users.html'" name="" style="position: absolute; : 0">View Chats</button> <!--need username-->
-  </div>
+        <button id="view_chats"  onclick="window.location ='../html/chats_users.html'" name="" style="position: absolute; : 0">View Chats</button> <!--need username-->
+    </div>
 </div>
 
 
 
 
-  </body>
+</body>
 </html>

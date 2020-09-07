@@ -36,7 +36,9 @@ $(document).ready(function () {
         localStorage.setItem("uStdNo",studentNo);
 
 
-
+        let receiver_stud = localStorage.getItem("uStdNo");
+        let sender_stud = localStorage.getItem("key");
+        getDetails(receiver_stud,sender_stud);
 
 
         // alert(name);
@@ -93,44 +95,16 @@ $(document).ready(function () {
     });
 
 
-    $('#table').on('click', '.ebtn', function(){
 
 
 
 
-        let receiver_stud = localStorage.getItem("uStdNo");
-        let sender_stud = localStorage.getItem("key");
+
+
 
         //alert(receiver_stud);
 
-            $.ajax({
-                header: {"Access-Control-Allow-Origin" :"*"},
-                datatype:'json',
-                type: "POST",
-                url: 'https://lamp.ms.wits.ac.za/~s1819369/fetch_messages.php',
-                data:{id: sender_stud,
-                    userid: receiver_stud},
-                success: function (data, status) {
 
-
-                    var data = jQuery.parseJSON(data);
-                    var source = $("#chats_template").html();
-                    var template = Handlebars.compile(source);
-                    $('.chatlogs').append(template(data));
-
-                }
-        });
-
-
-
-
-
-
-
-
-        // alert(name);
-
-    });
 
 
 

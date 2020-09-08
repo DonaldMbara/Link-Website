@@ -7,7 +7,6 @@ window.$ = $;
 var fs = require('fs');
 var jqueryT = fs.readFileSync('Link Website/js/sendMessages.js'); //this imports the file i want to test
 
-var html = fs.readFileSync('Link Website/html/chat_messages.html','utf-8');
 describe('validateSubmits', function() {
   it('shows/hides error banner', function() {
      question = require('./sendMessages.js'); //this imports the file i want to test

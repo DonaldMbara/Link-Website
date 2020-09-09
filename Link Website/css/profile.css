@@ -47,9 +47,15 @@
       display: flex;
     }
     .container .btn-holder {
-      justify-content: center;
+      justify-content: flex-start;
       display: flex;
     }
+
+    .container .btnc-holder {
+      justify-content: flex-end;
+      display: flex;
+    }
+
 
     button {
         font-family: "Roboto", sans-serif;

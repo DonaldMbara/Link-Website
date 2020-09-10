@@ -2,8 +2,17 @@
 <html lang="en">
   <head>
     <title>Add To Calendar</title>
-    <script type="text/javascript" src = "../js/calendar.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src = "../js/calendar.js"></script> -->
+    <script src = "../js/calendar.js" async=""></script>
     <style>
+    body{
+      background: #008577;
+    }
         #calendar {
           width: 80%;
           margin-left: 10%;
@@ -20,7 +29,41 @@
           padding: 20px 0px;
           color: #fff;
         }
+        .calendarTable tr td{
+          text-align: center;
+          padding: 20px 0px;
+          border: 1px solid #ccc;
+          cursor: pointer;
+          background: #dadada;
+        }
+        .calendarBtns{
+          padding: 10px 0;
+          width: 100%;
+
+        }
+        .calendarBtns button{
+          padding: 6px 12px;
+          font-size: 18px;
+          border-radius: 6px;
+          cursor: pointer;
+        }
+
+        .calendarDiv{
+          display: none;
+        }
+
+        #calendarTable_1{
+          display: block;
+        }
     </style>
+
+    <script>
+
+// function callnext() {
+//    alert('UpdateStatus called');
+// }
+
+</script>
   </head>
 <body>
     <div id="the_calendar"></div>

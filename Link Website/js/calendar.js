@@ -1,4 +1,7 @@
-window.onload = function() {
+// window.onload = function() {
+// $(document).ready(function () {
+
+  let calendarShow = 1;
 function settingDate(date, day){
   date = new Date(date);
   date.setDate(day);
@@ -27,7 +30,7 @@ function getDatesBetween(date1, date2){
   }
 
   console.log(dates);
-  let content = "";
+  let content = "<div class='calendarBtns'> <button id='calendarPrev' onclick='callPrev()' disabled>Prev</button> | <button id='calendarNext'  onclick='callNext()'>Next</button></div>";
   let weekDays = [
     {shortDay: "Mon", fullDay: "Monday"},
     {shortDay: "Tue", fullDay: "Tuesday"},
@@ -42,13 +45,13 @@ function getDatesBetween(date1, date2){
   for (let i =0; i < dates.length;i++){
     lastDate = dates[i];
     firstDate = new Date(dates[i].getFullYear(), dates[i].getMonth(),1);
-    content+= "<div id='calendarTable_" + (i+1) +"'>";
+    content+= "<div id='calendarTable_" + (i+1) +"' class='calendarDiv'>";
     content+= "<h2>" +
     firstDate.toString().split(" ")[1]+
     "-" +
     firstDate.getFullYear()+
     "</h2>";
-    content+= "<table class='calendarTable'>";
+    content+= "<table class='calendarTable' id='table_id'>";
     content+= "<thead >";
 
   //  Getting full day name
@@ -61,13 +64,16 @@ function getDatesBetween(date1, date2){
     content+= "<tbody >";
     let j =1;
     let displayNum, idMonth;
+
     while(j <= lastDate.getDate()){
-      content+= "<tr>";
+      let theMonth = firstDate.getMonth();
+      let theYear = firstDate.getFullYear();
+      content+= "<tr >";
       for (let k=0; k < 7;k++){
         displayNum = j < 10 ? "0" + j : j;
         if (j == 1){
           if(firstDate.toString().split(" ")[0] == weekDays[k].shortDay){
-              content += "<td>"+displayNum+"</td>";
+              content += "<td onclick='trClick("+displayNum+","+theMonth+","+theYear+")'>"+displayNum+"</td>";
               j++;
           }else{
               content += "<td></td>";
@@ -75,7 +81,7 @@ function getDatesBetween(date1, date2){
         } else if (j > lastDate.getDate()) {
           content += "<td></td>";
         }else{
-          content += "<td>"+displayNum+"</td>";
+          content += "<td onclick='trClick("+displayNum+","+theMonth+","+theYear+")'>"+displayNum+"</td>";
           j++;
         }
       }
@@ -88,8 +94,49 @@ function getDatesBetween(date1, date2){
   }
   return content;
 }
+//
+function trClick(day,month,year){
+    let datelog = "" + day +" "+month +" "+year;
+    alert(datelog);
+    // alert(year);
+}
+
+
+function callPrev(){
+  let alltable = document.getElementsByClassName("calendarDiv");
+  document.getElementById('calendarNext').disabled = false;
+  calendarShow--;
+  if(calendarShow >= 1){
+  for(let i=0; i < alltable.length;i++){
+    alltable[i].style.display = "none";
+  }
+  document.getElementById("calendarTable_"+ calendarShow).style.display= "block";
+  if(calendarShow == 1){
+    document.getElementById('calendarPrev').disabled = true;
+  }
+}
+
+}
+
+function callNext(){
+   // window.location.reload(true);
+    // alert("Poop");
+    let alltable = document.getElementsByClassName("calendarDiv");
+    document.getElementById('calendarPrev').disabled = false;
+    calendarShow++;
+    if(calendarShow <= alltable.length){
+    for(let i=0; i < alltable.length;i++){
+      alltable[i].style.display = "none";
+    }
+    document.getElementById("calendarTable_"+ calendarShow).style.display= "block";
+    if(calendarShow == alltable.length){
+      document.getElementById('calendarNext').disabled = true;
+    }
+  }
+}
 
 let content = getDatesBetween("2020/01/01", "2021/01/01");
 document.getElementById("the_calendar").innerHTML = content;
 
-}
+// }
+// });

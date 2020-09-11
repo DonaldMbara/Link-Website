@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     $('#table').on('click', '.ebtn', function(){
         //alert("Marcel");
-
+        $("div.card").remove();
         var row= $(this).closest("tr");
         var name =  row.find("td:eq(0)").text();
         var studentNo = row.find("td:eq(2)").text();

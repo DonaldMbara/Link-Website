@@ -1,3 +1,57 @@
+const obj2 = {
+sum(vals){
+
+    let sum = 0;
+
+    vals.forEach((val) => {
+        sum += val;
+    });
+
+    return sum;
+}
+};
+const obj3 = {
+positive(vals){
+
+    return vals.filter((x) => { return x > 0; });
+}
+};
+const obj4 = {
+negative(vals){
+
+    return vals.filter((x) => { return x < 0; });
+}
+};
+const obj5 = {
+comment_upload(comment,username, answer_id){
+   $.ajax({
+    header: {"Access-Control-Allow-Origin" :"*"},
+    datatype:'json',
+    type: "POST",
+    url: 'https://lamp.ms.wits.ac.za/~s1819369/comments.php',
+    data:{post_id:answer_id, author:username, comment:comment},
+    success: function (data, status) {
+        window.location.reload(true);
+       }
+     });
+}
+};
+const obj6 = {
+postAnswer( username, post_id ,answer){
+    var bool = 0;
+    $.ajax({
+    header: {"Access-Control-Allow-Origin" :"*"},
+    datatype:'json',
+    type: "POST",
+    url: 'https://lamp.ms.wits.ac.za/~s1819369/addAns.php',
+    data:{author:username, post_id:post_id, answer:answer},
+    success: function (data, status) {
+      bool  = 1;
+        window.location.reload(true);
+       }
+     });
+}
+};
 $(document).ready(function(){
    var courseid = localStorage.getItem("courseid");
    var post_id = localStorage.getItem("post_id");
@@ -54,6 +108,7 @@ $('body').on('click', '.like_button',function(e) {
     data:{id:post_id, userid:userid},
     success: function (data, status) {
         $(this).val(data.likes);
+        window.location.reload(true);
 
        }
      });
@@ -118,35 +173,16 @@ $('body').on('click', '#comment_button', function(e){
     id2 = $(this).parents()[1];
     answer_id = $(id2).find('.answer_card').attr('id');
     comment = $(id).find('.comment_input').val();
-    $.ajax({
-      header: {"Access-Control-Allow-Origin" :"*"},
-      datatype:'json',
-      type: "POST",
-      url: 'https://lamp.ms.wits.ac.za/~s1819369/comments.php',
-      data:{post_id:answer_id, author:username, comment:comment},
-      success: function (data, status) {
-          window.location.reload(true);
-
-         }
-       });
+     comment_upload(comment,author, username);
 });
 
 //this takes the answer and post it then reloaads the page
 $('body').on('click', '#answer_button', function(e){
     parent = $(this).parents()[0];
     answer = $("#"+parent.id).find('#answer_input').val();
-    author = "mj";
-    $.ajax({
-      header: {"Access-Control-Allow-Origin" :"*"},
-      datatype:'json',
-      type: "POST",
-      url: 'https://lamp.ms.wits.ac.za/~s1819369/addAns.php',
-      data:{author:username, post_id:post_id, answer:answer},
-      success: function (data, status) {
-          window.location.reload(true);
+    postAnswer(username,post_id, answer);
 
-         }
-       });
 });
 
 });
+module.exports = {obj2,obj3,obj4,obj5,obj6};

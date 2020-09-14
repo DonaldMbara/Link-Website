@@ -97,7 +97,13 @@ function getDatesBetween(date1, date2){
 //
 function trClick(day,month,year){
     let datelog = "" + day +" "+month +" "+year;
-    alert(datelog);
+    // alert(datelog);
+    localStorage.setItem("keyDay", day);
+    localStorage.setItem("keyMonth", month);
+    localStorage.setItem("keyYear", year);
+
+    window.location.href = "../html/logevent.html";
+
     // alert(year);
 }
 

@@ -46,7 +46,7 @@ $(document).ready(function () {
                     alert(response);
                     if(response === 'data matched'){
                         window.location = 'home.html?username='+ encodeURIComponent(username); //passed the username with the link, now check home.html at the top
-                        localStorage.setItem("key", studentNo);
+                        localStorage.setItem("studNo", studentNo);
                     }
                     if(response === 'try again'){
                         alert('Invalid Credentials')

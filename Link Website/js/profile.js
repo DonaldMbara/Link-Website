@@ -21,7 +21,7 @@ $(document).ready(function (){
         surname = obj.LastName;
         username = obj.Username;
         e_mail = obj.email;
-
+        localStorage.setItem("Fname", firstname);
         // alert(e_mail);
         $('#text2').html("Name : ".concat(firstname));
         $('#text1').html("LastName : ".concat(surname));

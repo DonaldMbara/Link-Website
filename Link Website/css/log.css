@@ -1,0 +1,95 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+  body {
+    position: relative;
+    background: linear-gradient(to left, #8942a8, #ba382f );
+      }
+    .profileHead {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 20%;
+    }
+    .header{
+      color: black;
+      justify-content: center;
+      display: flex;
+      /* left:365px; */
+    }
+    .contents{
+      color: green;
+      justify-content: center;
+      display: flex;
+
+    }
+    #myBtn{
+
+        width: 5%;
+        height: 15%;
+        font-size: 8pt;
+        font-family: tahoma;
+        margin-top: 1px;
+        margin-right: 2px;
+        position:absolute;
+        top:15%;
+        right: 35%;
+
+    }
+    .wrapper{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .log-form{
+      max-width: 550px;
+      margin: 0 auto;
+      background: #b0e5ff;
+      padding: 30px;
+      border-radius: 5px;
+
+    }
+
+    .container {
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      display: flex;
+    }
+    .container .btn-holder {
+      justify-content: flex-start;
+      display: flex;
+    }
+
+    .container .btnc-holder {
+      justify-content: flex-end;
+      display: flex;
+    }
+
+
+    button {
+        font-family: "Roboto", sans-serif;
+        border: 1px solid black;
+        background-color:#32CD32;
+        color: black;
+        width: 20%;
+        right: 40%;
+        outline: none;
+        font-size: 16px;
+        position: absolute;
+        bottom: 50px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    }
+
+
+
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

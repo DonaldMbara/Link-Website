@@ -1,3 +1,5 @@
+<?php include("https://lamp.ms.wits.ac.za/~s1819369/upload_image.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,6 +12,8 @@
     <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src = "../js/profile.js"></script>
+
+    <script type="text/javascript" src = "../js/uploadPic.js"></script>
 
 
   </head>
@@ -46,6 +50,19 @@
     }
   </script>
   <script>
+    function previewFile(input){
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function(e) {
+            $('#profilePic').attr('src', e.target.result);
+          }
+
+          reader.readAsDataURL(input.files[0]); // convert to base64 string
+        }
+      }
+
+
     function getUsername(){
 
       let data = window.location; //the whole link
@@ -73,7 +90,7 @@
 
         <div>
             <div class="aside">
-                <img class="profileHead" src="../image/profiledoji.png" alt="Missing">
+                <img  id="profilePic" class="profileHead" src="../image/profiledoji.png" alt="Placeholder">
             </div>
         </div>
 
@@ -91,9 +108,15 @@
             <p>Upload picture</p>
             <form method="post"  enctype="multipart/form-data">
               <label>Select Image File:</label>
-              <input type="file" name="image">
-              <input type="submit" name="submit" value="Upload">
+              <input type="file" id="file" onchange="previewFile(this);" name="image" required>
+              <input type="submit"  id="upload" name="submit" value="Upload">
             </form>
+            <!-- Display response messages -->
+            <?php if(!empty($resMessage)) {?>
+            <div class="alert <?php echo $resMessage['status']?>">
+              <?php echo $resMessage['message']?>
+            </div>
+            <?php }?>
           </div>
 
         </div>

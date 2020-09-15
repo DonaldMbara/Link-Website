@@ -1,8 +1,4 @@
 $(document).ready(function () {
-
-
-
-
     $.getJSON("https://lamp.ms.wits.ac.za/~s1819369/getNames.php",
 
         function (data) {
@@ -12,8 +8,8 @@ $(document).ready(function () {
 
 
                 username +=
-                    '<tr >'  ;
-                username += '<td  >' +
+                    '<tr class="border_bottom" >'  ;
+                username += '<td   >' +
                     value.Username  +'</td>';
                 username += '<td>' + '<button class="ebtn">' + 'Chat</button>' + '</td>';
                 username += '<td style="color: lightyellow;">' + value.StudentNo +  '</td>>';
@@ -91,24 +87,27 @@ $(document).ready(function () {
 
     });
 });
- const s1 = (vals) => {
 
-     let sum = 0;
 
-     vals.forEach((val) => {
-         sum += val;
-     });
 
-     return sum;
- }
+const sum1 = (vals) => {
 
- const p1 = (vals) => {
+    let sum = 0;
 
-     return vals.filter((x) => { return x > 0; });
- }
+    vals.forEach((val) => {
+        sum += val;
+    });
 
- const n1 = (vals) => {
+    return sum;
+}
 
-     return vals.filter((x) => { return x < 0; });
- }
- module.exports = { s1, p1, n1};
+const positive1 = (vals) => {
+
+    return vals.filter((x) => { return x > 0; });
+}
+
+const negative1 = (vals) => {
+
+    return vals.filter((x) => { return x < 0; });
+}
+module.exports = { sum1, positive1, negative1};

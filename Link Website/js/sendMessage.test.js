@@ -16,7 +16,7 @@ describe('validateSubmits', function() {
 });
 
 describe('vals', function(){
-const { sum, positive, negative } = require('./sendMessages');
+const { sum1, positive1, negative1 } = require('./sendMessages');
 let vals;
 let sum_of_vals;
 let pos_vals;
@@ -31,14 +31,14 @@ beforeAll(() => {
 })
 
 test('the sum of vals should be 2', () => {
-    expect(sum(vals)).toBe(sum_of_vals);
+    expect(sum1(vals)).toBe(sum_of_vals);
 });
 
 test('should get positive values', () => {
-    expect(positive(vals)).toEqual(pos_vals);
+    expect(positive1(vals)).toEqual(pos_vals);
 });
 
 test('should get negative values', () => {
-    expect(negative(vals)).toEqual(neg_vals);
+    expect(negative1(vals)).toEqual(neg_vals);
 });
 });

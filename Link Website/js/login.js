@@ -8,6 +8,7 @@ $(document).ready(function () {
 
 
 
+
         $(".error").remove(); //removing everything else that is in the span before using it
 
         //Checking validation of our inputs
@@ -46,7 +47,7 @@ $(document).ready(function () {
                     alert(response);
                     if(response === 'data matched'){
                         window.location = 'home.html?username='+ encodeURIComponent(username); //passed the username with the link, now check home.html at the top
-                        localStorage.setItem("studNo", studentNo);
+                        localStorage.setItem("key", studentNo);
                     }
                     if(response === 'try again'){
                         alert('Invalid Credentials')

@@ -142,7 +142,7 @@ window.onload = function what(){
   let theDay = localStorage.getItem("keyDay");
   let theMonth = localStorage.getItem("keyMonth");
   let theYear = localStorage.getItem("keyYear");
-  let studentNumber = localStorage.getItem("studNo");
+  let studentNumber = localStorage.getItem("key");
   let firstname = localStorage.getItem("Fname");
   // alert(studentNumber);
 
@@ -188,10 +188,6 @@ window.onload = function what(){
   }
 
 
-  // let theTime = ""+value + ":" + ""+mins;
-  // var theTime  = mins;
-
-  // clickFunction(theTime);
   function clickFunction(){
     // alert(hour + ":" + mins);
     $.ajax({
@@ -217,9 +213,6 @@ window.onload = function what(){
   }
 
 
-  // $("log-btn").click(function(){
-  //   alert("Poop");
-  // });
 
   const sum = (vals) => {
 

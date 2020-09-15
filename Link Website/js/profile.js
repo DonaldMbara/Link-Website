@@ -5,7 +5,7 @@ $(document).ready(function (){
 
     var s = localStorage.getItem("key");
     let static_studentNumber = s;
-    // alert(s);
+    
 
     $.ajax({
       header: {"Access-Control-Allow-Origin" : "*"},

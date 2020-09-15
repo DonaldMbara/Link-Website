@@ -25,7 +25,7 @@ body {
 }
 #search-container{
   padding-top:10px;
-  margin-left: 74.15%;
+  margin-left: 73.15%;
 }
 #results {
  position: absolute;
@@ -43,9 +43,6 @@ body {
   text-align: center;
 }
 
-#question-page{
-  margin-top: 60px;
-}
   #cont{
     padding-left: 200px;
     padding-bottom: 5px;

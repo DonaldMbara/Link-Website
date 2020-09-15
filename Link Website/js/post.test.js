@@ -11,25 +11,36 @@ var html = fs.readFileSync('Link Website/html/post.html','utf-8');
 describe('validateSubmits', function() {
   it('shows/hides error banner', function() {
      question = require('./post.js'); //this imports the file i want to test
-    const scriptEl = window.document.createElement('script');
-    scriptEl.textContent = jqueryT;
-    window.document.body.appendChild(scriptEl);
 
-    $.ajax = jest.fn().mockImplementation(question => {
-      let instance = {
-        done: fn => {
-          if (question.success) fn("test passed");
-          return instance;
-        },
-        fail: fn => {
-          if (!question.success) fn("test failed");
-          return instance;
-        }
-      };
-      return instance;
-    });
+
+});
+});
 
 
 
+describe('vals', function(){
+const { sum, positive, negative } = require('./post');
+let vals;
+let sum_of_vals;
+let pos_vals;
+let neg_vals;
+
+beforeAll(() => {
+    pos_vals = [2, 1, 3];
+    neg_vals = [-2, -1, -1];
+    vals = pos_vals.concat(neg_vals);
+    sum_of_vals = vals.reduce((x, y) => x + y, 0);
+})
+
+test('the sum of vals should be 2', () => {
+    expect(sum(vals)).toBe(sum_of_vals);
+});
+
+test('should get positive values', () => {
+    expect(positive(vals)).toEqual(pos_vals);
+});
+
+test('should get negative values', () => {
+    expect(negative(vals)).toEqual(neg_vals);
 });
 });

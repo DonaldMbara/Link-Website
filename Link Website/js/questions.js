@@ -1,55 +1,87 @@
+const sum = (vals) => {
+
+    let sum = 0;
+
+    vals.forEach((val) => {
+        sum += val;
+    });
+
+    return sum;
+}
+
+const positive = (vals) => {
+
+    return vals.filter((x) => { return x > 0; });
+}
+
+const negative = (vals) => {
+
+    return vals.filter((x) => { return x < 0; });
+}
+
+
+const class1 = {
+   questions(courseid){
+     $.ajax({
+        header: {"Access-Control-Allow-Origin" :"*"},
+        type: 'GET',
+        url:'https://lamp.ms.wits.ac.za/~s1819369/getposts.php',
+        data:{courseid:courseid},
+        datatype:'json',
+        success: function (data, status){
+           var data = jQuery.parseJSON(data);
+           querySet = data;
+           var source = $("#questions_template").html();
+           var template = Handlebars.compile(source);
+           $('body').append(template(data));
+            }
+
+     });
+     return 1;
+   }
+};
+
+// live search
+const class2 = {
+  search(inputVal, courseid){
+    $.ajax({
+
+      header: {"Access-Control-Allow-Origin" :"*"},
+      datatype:'json',
+      type:'GET',
+      url:"https://lamp.ms.wits.ac.za/~s1819369/live.php",
+      data:{term: inputVal,courseid: courseid},success:(function(data){
+
+         var data = jQuery.parseJSON(data);
+         var output = '<div class="container">';
+         $.each(data, function(key, value){
+            output += '<h5>' + value.POST_AUTHOR + '</h5>';
+            output += '<p id="question_p">' + value.POST_STATUS + '</p>'
+
+             });
+
+       output += '</div>';
+       $('#results').html(output);
+
+          })
+
+       });
+       return 1;
+  }
+};
 $(document).ready(function(){
     var courseid= localStorage.getItem("c_id");
     var querySet;
     var userid = localStorage.getItem("key");
 
     //this loads all the questions from the selected course.
-    $.ajax({
-       header: {"Access-Control-Allow-Origin" :"*"},
-       type: 'GET',
-       url:'https://lamp.ms.wits.ac.za/~s1819369/getposts.php',
-       data:{courseid:courseid},
-       datatype:'json',
-       success: function (data, status){
-
-          var data = jQuery.parseJSON(data);
-          querySet = data;
-          var source = $("#questions_template").html();
-          var template = Handlebars.compile(source);
-          $('body').append(template(data));
-
-           }
-
-    });
+  class1.questions(courseid);
 
 //this is the live question filter.
     $('#txt-search').on("keyup input", function(){
        var inputVal = $(this).val();
        if(inputVal.length){
-
-          $.ajax({
-
-            header: {"Access-Control-Allow-Origin" :"*"},
-            datatype:'json',
-            type:'GET',
-            url:"https://lamp.ms.wits.ac.za/~s1819369/live.php",
-            data:{term: inputVal,courseid: courseid},success:(function(data){
-
-               var data = jQuery.parseJSON(data);
-               var output = '<div class="container">';
-               $.each(data, function(key, value){
-        		       output += '<h5>' + value.POST_AUTHOR + '</h5>';
-        		       output += '<p id="question_p">' + value.POST_STATUS + '</p>'
-
-                   });
-
-             output += '</div>';
-             $('#results').html(output);
-
-                })
-
-             });
-
+       class2.search(inputVal, courseid);
          }
 
      });
@@ -58,19 +90,8 @@ $(document).ready(function(){
   $('body').on('click','i',function(e){
     var id  = $(this).parent();
     var post_id = id[0].id;
-    $.ajax({
-      header: {"Access-Control-Allow-Origin" :"*"},
-      datatype:'json',
-      type: "POST",
-      url: 'https://lamp.ms.wits.ac.za/~s1819369/Testing.php',
-      data:{id:post_id, userid:userid},
-      success: function (data, status) {
-          $(this).val(data.likes);
-          window.location.reload(true);
-
-         }
-       });
-
+    const {obj,obj2,obj3,obj4,obj5,obj6, obj7} = require('./answers');
+    obj3.like(post_id, userid);
    });
 
 
@@ -87,7 +108,6 @@ $(document).ready(function(){
 
            }
        });
-
       var el_up = document.getElementById("question_id");
         window.scrollTo(0, $("#"+question_id).offset().top);
     });
@@ -104,8 +124,7 @@ $(document).ready(function(){
        localStorage.setItem("likes",$(this).find("#like_button").text());
        localStorage.setItem("userid",userid);
         window.location.href = "answers.html";
-
-
         });
 
 });
+module.exports = { sum, positive, negative, class1,class2};

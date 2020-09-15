@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for profile.js</title>
+    <title>Code coverage report for user_profile.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> profile.js</h1>
+        <h1><a href="index.html">All files</a> user_profile.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">48.15% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/27</span>
+                <span class='fraction'>13/26</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">44% </span>
+                <span class="strong">45.83% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/25</span>
+                <span class='fraction'>11/24</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -115,16 +115,11 @@
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
 <a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,12 +134,15 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,41 +175,40 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">$(document).ready(<span class="fstat-no" title="function not covered" >fu</span>nction (){
 &nbsp;
-    var response = <span class="cstat-no" title="statement not covered" >'';</span>
+&nbsp;
+        let uStudent = <span class="cstat-no" title="statement not covered" >localStorage.getItem("uStdNo")</span>
+        let uName = <span class="cstat-no" title="statement not covered" >localStorage.getItem("uName");</span>
+<span class="cstat-no" title="statement not covered" >        $.ajax({</span>
+            header: {"Access-Control-Allow-Origin" : "*"},
+            type: "GET",
+            url: 'https://lamp.ms.wits.ac.za/~s1819369/profile.php',
+&nbsp;
+            data: {
+                studentNo : uStudent
+            },
+            success : <span class="fstat-no" title="function not covered" >fu</span>nction(output){
+                var obj = <span class="cstat-no" title="statement not covered" >JSON.parse(output);</span>
+<span class="cstat-no" title="statement not covered" >                firstname = obj.FirstName;</span>
+<span class="cstat-no" title="statement not covered" >                surname = obj.LastName;</span>
+<span class="cstat-no" title="statement not covered" >                username = obj.Username;</span>
+<span class="cstat-no" title="statement not covered" >                e_mail = obj.email;</span>
+&nbsp;
+                // alert(e_mail);
+<span class="cstat-no" title="statement not covered" >                $('#text2').html("Name : ".concat(firstname));</span>
+<span class="cstat-no" title="statement not covered" >                $('#text1').html("LastName : ".concat(surname));</span>
+<span class="cstat-no" title="statement not covered" >                $('#text3').html("Username : ".concat(username));</span>
+<span class="cstat-no" title="statement not covered" >                $('#text4').html("Email : ".concat(e_mail));</span>
+<span class="cstat-no" title="statement not covered" >                $("#profile_header").text(uName + "'s Profile");</span>
 &nbsp;
 &nbsp;
-    var s = <span class="cstat-no" title="statement not covered" >localStorage.getItem("key");</span>
-    let static_studentNumber = <span class="cstat-no" title="statement not covered" >s;</span>
-    // alert(s);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    $.ajax({</span>
-      header: {"Access-Control-Allow-Origin" : "*"},
-      type: "GET",
-      url: 'https://lamp.ms.wits.ac.za/~s1819369/profile.php',
+            }
 &nbsp;
-      data: {
-        studentNo : static_studentNumber
-      },
-      success : <span class="fstat-no" title="function not covered" >fu</span>nction(output){
-        var obj = <span class="cstat-no" title="statement not covered" >JSON.parse(output);</span>
-<span class="cstat-no" title="statement not covered" >        firstname = obj.FirstName;</span>
-<span class="cstat-no" title="statement not covered" >        surname = obj.LastName;</span>
-<span class="cstat-no" title="statement not covered" >        username = obj.Username;</span>
-<span class="cstat-no" title="statement not covered" >        e_mail = obj.email;</span>
-<span class="cstat-no" title="statement not covered" >        localStorage.setItem("Fname", firstname);</span>
-        // alert(e_mail);
-<span class="cstat-no" title="statement not covered" >        $('#text2').html("Name : ".concat(firstname));</span>
-<span class="cstat-no" title="statement not covered" >        $('#text1').html("LastName : ".concat(surname));</span>
-<span class="cstat-no" title="statement not covered" >        $('#text3').html("Username : ".concat(username));</span>
-<span class="cstat-no" title="statement not covered" >        $('#text4').html("Email : ".concat(e_mail));</span>
+        });
 &nbsp;
-&nbsp;
-      }
-&nbsp;
-    });
-&nbsp;
-}
+    }
 );
+&nbsp;
 &nbsp;
 const sum = (vals) =&gt; {
 &nbsp;

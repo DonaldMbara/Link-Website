@@ -2,9 +2,6 @@ $(document).ready(function () {
     $('#posting-form').submit(function (e) {
         e.preventDefault();
 
-
-
-
         let status = $('#status').val().trim();
         let courseid = $('.dropbtn').attr("name");
         let name = localStorage.getItem("username");//here I made the name to be the name of the button which is the username
@@ -50,6 +47,26 @@ $(document).ready(function () {
 
 
     });
-
-
 });
+
+const sum = (vals) => {
+
+    let sum = 0;
+
+    vals.forEach((val) => {
+        sum += val;
+    });
+
+    return sum;
+}
+
+const positive = (vals) => {
+
+    return vals.filter((x) => { return x > 0; });
+}
+
+const negative = (vals) => {
+
+    return vals.filter((x) => { return x < 0; });
+}
+module.exports = { sum, positive, negative};

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for profile.js</title>
+    <title>Code coverage report for uploadPic.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> profile.js</h1>
+        <h1><a href="index.html">All files</a> uploadPic.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">48.15% </span>
+                <span class="strong">81.25% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/27</span>
+                <span class='fraction'>13/16</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">66.67% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>6/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">44% </span>
+                <span class="strong">78.57% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/25</span>
+                <span class='fraction'>11/14</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -111,18 +111,13 @@
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
-<a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -134,20 +129,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,43 +165,38 @@
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">$(document).ready(<span class="fstat-no" title="function not covered" >fu</span>nction (){
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+//Adding a submit function to the form
+$('#upload').submit(<span class="fstat-no" title="function not covered" >fu</span>nction(e){
 &nbsp;
-    var response = <span class="cstat-no" title="statement not covered" >'';</span>
+<span class="cstat-no" title="statement not covered" >     e.preventDefault();</span>
 &nbsp;
 &nbsp;
-    var s = <span class="cstat-no" title="statement not covered" >localStorage.getItem("key");</span>
-    let static_studentNumber = <span class="cstat-no" title="statement not covered" >s;</span>
-    // alert(s);
+&nbsp;
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    $.ajax({</span>
-      header: {"Access-Control-Allow-Origin" : "*"},
-      type: "GET",
-      url: 'https://lamp.ms.wits.ac.za/~s1819369/profile.php',
 &nbsp;
-      data: {
-        studentNo : static_studentNumber
-      },
-      success : <span class="fstat-no" title="function not covered" >fu</span>nction(output){
-        var obj = <span class="cstat-no" title="statement not covered" >JSON.parse(output);</span>
-<span class="cstat-no" title="statement not covered" >        firstname = obj.FirstName;</span>
-<span class="cstat-no" title="statement not covered" >        surname = obj.LastName;</span>
-<span class="cstat-no" title="statement not covered" >        username = obj.Username;</span>
-<span class="cstat-no" title="statement not covered" >        e_mail = obj.email;</span>
-<span class="cstat-no" title="statement not covered" >        localStorage.setItem("Fname", firstname);</span>
-        // alert(e_mail);
-<span class="cstat-no" title="statement not covered" >        $('#text2').html("Name : ".concat(firstname));</span>
-<span class="cstat-no" title="statement not covered" >        $('#text1').html("LastName : ".concat(surname));</span>
-<span class="cstat-no" title="statement not covered" >        $('#text3').html("Username : ".concat(username));</span>
-<span class="cstat-no" title="statement not covered" >        $('#text4').html("Email : ".concat(e_mail));</span>
+        url: "https://lamp.ms.wits.ac.za/~s1819369/profpic.php",
 &nbsp;
+        //For file upload we use post request
+        type: "POST",
 &nbsp;
-      }
+        //Creating data from form
+        data: new FormData(this),
 &nbsp;
+        //Setting these to false because we are sending a multipart request
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: <span class="fstat-no" title="function not covered" >fu</span>nction(data){
+            //If the request is successfull we will get the scripts output in data variable
+            //Showing the result in our html element
+<span class="cstat-no" title="statement not covered" >            alert(data);</span>
+        },
+        error: <span class="fstat-no" title="function not covered" >fu</span>nction(){}
     });
+});
 &nbsp;
-}
-);
 &nbsp;
 const sum = (vals) =&gt; {
 &nbsp;

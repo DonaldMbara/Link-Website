@@ -193,7 +193,7 @@ $('body').on('click', '#comment_button', function(e){
     id2 = $(this).parents()[1];
     answer_id = $(id2).find('.answer_card').attr('id');
     comment = $(id).find('.comment_input').val();
-     obj5.comment_upload(comment,author, username);
+     obj5.comment_upload(comment, username, answer_id);
 });
 
 //this takes the answer and post it then reloaads the page

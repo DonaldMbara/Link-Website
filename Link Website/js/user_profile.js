@@ -25,8 +25,6 @@ $(document).ready(function (){
                 $('#text4').html("Email : ".concat(e_mail));
                 $("#profile_header").text(uName + "'s Profile");
 
-
-
             }
 
         });

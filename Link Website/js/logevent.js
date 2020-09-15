@@ -96,8 +96,9 @@ var timeObject = {
     "30" : ["Available"]
   }
 }
+window.onload = function what(){
   document.getElementById("log-btn").disabled = true;
-
+};
   function changeForm(mon){
 
     if(mon == 0){

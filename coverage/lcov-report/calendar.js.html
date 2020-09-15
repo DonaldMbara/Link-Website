@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">61.46% </span>
+                <span class="strong">73.2% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>59/96</span>
+                <span class='fraction'>71/97</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">69.23% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/12</span>
+                <span class='fraction'>9/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.5% </span>
+                <span class="strong">73.03% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>55/88</span>
+                <span class='fraction'>65/89</span>
             </div>
         
             
@@ -226,7 +226,8 @@
 <a name='L167'></a><a href='#L167'>167</a>
 <a name='L168'></a><a href='#L168'>168</a>
 <a name='L169'></a><a href='#L169'>169</a>
-<a name='L170'></a><a href='#L170'>170</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -371,30 +372,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// window.onload = function() {
 // $(document).ready(function () {
 &nbsp;
@@ -539,31 +541,32 @@ function <span class="fstat-no" title="function not covered" >callNext(</span>){
 }
 &nbsp;
 let content = getDatesBetween("2020/01/01", "2021/01/01");
-document.getElementById("the_calendar").innerHTML = content;
-&nbsp;
+window.onload = function <span class="fstat-no" title="function not covered" >what(</span>){
+<span class="cstat-no" title="statement not covered" >document.getElementById("the_calendar").innerHTML = content;</span>
+};
 // }
 // });
-const sum = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(v</span>als) =&gt; {</span>
+const sum = (vals) =&gt; {
 &nbsp;
-    let sum = <span class="cstat-no" title="statement not covered" >0;</span>
+    let sum = 0;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    vals.forEach(<span class="fstat-no" title="function not covered" >(v</span>al) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        sum += val;</span>
+    vals.forEach((val) =&gt; {
+        sum += val;
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return sum;</span>
+    return sum;
 }
 &nbsp;
-const positive = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(v</span>als) =&gt; {</span>
+const positive = (vals) =&gt; {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return vals.filter(<span class="fstat-no" title="function not covered" >(x</span>) =&gt; { <span class="cstat-no" title="statement not covered" >return x &gt; 0; </span>});</span>
+    return vals.filter((x) =&gt; { return x &gt; 0; });
 }
 &nbsp;
-const negative = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(v</span>als) =&gt; {</span>
+const negative = (vals) =&gt; {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return vals.filter(<span class="fstat-no" title="function not covered" >(x</span>) =&gt; { <span class="cstat-no" title="statement not covered" >return x &lt; 0; </span>});</span>
+    return vals.filter((x) =&gt; { return x &lt; 0; });
 }
-<span class="cstat-no" title="statement not covered" >module.exports = { sum, positive, negative};</span>
+module.exports = { sum, positive, negative};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -571,7 +574,7 @@ const negative = <span class="cstat-no" title="statement not covered" ><span cla
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Sep 15 2020 04:09:05 GMT+0200 (South Africa Standard Time)
+                at Tue Sep 15 2020 04:24:24 GMT+0200 (South Africa Standard Time)
             </div>
         </div>
         <script src="prettify.js"></script>

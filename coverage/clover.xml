@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1600135745837" clover="3.2.0">
-  <project timestamp="1600135745837" name="All files">
-    <metrics statements="593" coveredstatements="212" conditionals="116" coveredconditionals="17" methods="158" coveredmethods="81" elements="867" coveredelements="310" complexity="0" loc="593" ncloc="593" packages="1" files="16" classes="16"/>
+<coverage generated="1600136665756" clover="3.2.0">
+  <project timestamp="1600136665757" name="All files">
+    <metrics statements="594" coveredstatements="222" conditionals="116" coveredconditionals="17" methods="159" coveredmethods="87" elements="869" coveredelements="326" complexity="0" loc="594" ncloc="594" packages="1" files="16" classes="16"/>
     <file name="answers.js" path="/home/sikhanyiso/Link-Website/Link Website/js/answers.js">
       <metrics statements="79" coveredstatements="23" conditionals="2" coveredconditionals="0" methods="22" coveredmethods="7"/>
       <line num="2" count="1" type="stmt"/>
@@ -85,7 +85,7 @@
       <line num="208" count="1" type="stmt"/>
     </file>
     <file name="calendar.js" path="/home/sikhanyiso/Link-Website/Link Website/js/calendar.js">
-      <metrics statements="88" coveredstatements="55" conditionals="26" coveredconditionals="17" methods="12" coveredmethods="3"/>
+      <metrics statements="89" coveredstatements="65" conditionals="26" coveredconditionals="17" methods="13" coveredmethods="9"/>
       <line num="4" count="1" type="stmt"/>
       <line num="6" count="12" type="stmt"/>
       <line num="7" count="12" type="stmt"/>
@@ -164,16 +164,17 @@
       <line num="139" count="0" type="stmt"/>
       <line num="144" count="1" type="stmt"/>
       <line num="145" count="1" type="stmt"/>
-      <line num="149" count="0" type="stmt"/>
-      <line num="151" count="0" type="stmt"/>
-      <line num="153" count="0" type="stmt"/>
-      <line num="154" count="0" type="stmt"/>
-      <line num="157" count="0" type="stmt"/>
-      <line num="160" count="0" type="stmt"/>
-      <line num="162" count="0" type="stmt"/>
-      <line num="165" count="0" type="stmt"/>
-      <line num="167" count="0" type="stmt"/>
-      <line num="169" count="0" type="stmt"/>
+      <line num="146" count="0" type="stmt"/>
+      <line num="150" count="1" type="stmt"/>
+      <line num="152" count="1" type="stmt"/>
+      <line num="154" count="1" type="stmt"/>
+      <line num="155" count="6" type="stmt"/>
+      <line num="158" count="1" type="stmt"/>
+      <line num="161" count="1" type="stmt"/>
+      <line num="163" count="6" type="stmt"/>
+      <line num="166" count="1" type="stmt"/>
+      <line num="168" count="6" type="stmt"/>
+      <line num="170" count="1" type="stmt"/>
     </file>
     <file name="eventUsers.js" path="/home/sikhanyiso/Link-Website/Link Website/js/eventUsers.js">
       <metrics statements="62" coveredstatements="11" conditionals="26" coveredconditionals="0" methods="13" coveredmethods="6"/>
@@ -619,16 +620,16 @@
       <line num="24" count="0" type="stmt"/>
       <line num="25" count="0" type="stmt"/>
       <line num="26" count="0" type="stmt"/>
+      <line num="36" count="1" type="stmt"/>
       <line num="38" count="1" type="stmt"/>
       <line num="40" count="1" type="stmt"/>
-      <line num="42" count="1" type="stmt"/>
-      <line num="43" count="6" type="stmt"/>
-      <line num="46" count="1" type="stmt"/>
-      <line num="49" count="1" type="stmt"/>
-      <line num="51" count="6" type="stmt"/>
-      <line num="54" count="1" type="stmt"/>
-      <line num="56" count="6" type="stmt"/>
-      <line num="58" count="1" type="stmt"/>
+      <line num="41" count="6" type="stmt"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="47" count="1" type="stmt"/>
+      <line num="49" count="6" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="54" count="6" type="stmt"/>
+      <line num="56" count="1" type="stmt"/>
     </file>
     <file name="users.js" path="/home/sikhanyiso/Link-Website/Link Website/js/users.js">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>

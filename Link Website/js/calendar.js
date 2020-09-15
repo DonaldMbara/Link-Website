@@ -142,8 +142,9 @@ function callNext(){
 }
 
 let content = getDatesBetween("2020/01/01", "2021/01/01");
+window.onload = function what(){
 document.getElementById("the_calendar").innerHTML = content;
-
+};
 // }
 // });
 const sum = (vals) => {

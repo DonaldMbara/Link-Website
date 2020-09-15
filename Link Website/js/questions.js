@@ -1,3 +1,5 @@
+    var querySet;
+
 const sum = (vals) => {
 
     let sum = 0;
@@ -71,7 +73,6 @@ const class2 = {
 };
 $(document).ready(function(){
     var courseid= localStorage.getItem("c_id");
-    var querySet;
     var userid = localStorage.getItem("key");
 
     //this loads all the questions from the selected course.

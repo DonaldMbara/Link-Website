@@ -91,24 +91,24 @@ $(document).ready(function () {
 
     });
 });
-// const sum = (vals) => {
-//
-//     let sum = 0;
-//
-//     vals.forEach((val) => {
-//         sum += val;
-//     });
-//
-//     return sum;
-// }
-//
-// const positive = (vals) => {
-//
-//     return vals.filter((x) => { return x > 0; });
-// }
-//
-// const negative = (vals) => {
-//
-//     return vals.filter((x) => { return x < 0; });
-// }
-// module.exports = { sum, positive, negative};
+ const s1 = (vals) => {
+
+     let sum = 0;
+
+     vals.forEach((val) => {
+         sum += val;
+     });
+
+     return sum;
+ }
+
+ const p1 = (vals) => {
+
+     return vals.filter((x) => { return x > 0; });
+ }
+
+ const n1 = (vals) => {
+
+     return vals.filter((x) => { return x < 0; });
+ }
+ module.exports = { s1, p1, n1};

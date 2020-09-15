@@ -7,7 +7,7 @@ var $ = require('jquery');
 window.$ = $;
 
 describe('vals', function(){
-const { sum, positive, negative } = require('./login');
+const { sum, positive, negative } = require('./user_profile');
 let vals;
 let sum_of_vals;
 let pos_vals;
@@ -33,25 +33,3 @@ test('should get negative values', () => {
     expect(negative(vals)).toEqual(neg_vals);
 });
 });
-
-const sum = (vals) => {
-
-    let sum = 0;
-
-    vals.forEach((val) => {
-        sum += val;
-    });
-
-    return sum;
-}
-
-const positive = (vals) => {
-
-    return vals.filter((x) => { return x > 0; });
-}
-
-const negative = (vals) => {
-
-    return vals.filter((x) => { return x < 0; });
-}
-module.exports = { sum, positive, negative};

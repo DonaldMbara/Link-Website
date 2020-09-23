@@ -18,7 +18,8 @@ $(document).ready(function (){
                 username = obj.Username;
                 e_mail = obj.email;
 
-                // alert(e_mail);
+                // alert(e_mail)
+
                 $('#text2').html("Name : ".concat(firstname));
                 $('#text1').html("LastName : ".concat(surname));
                 $('#text3').html("Username : ".concat(username));

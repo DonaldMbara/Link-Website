@@ -79,6 +79,7 @@ $(document).ready(function () {
 
                     },
                     success: function (data) {
+                        
                         $('#message_input').val("");//clear
                     },
                 });

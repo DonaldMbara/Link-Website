@@ -81,7 +81,7 @@ likeA(id,userid){
 };
 //called to upload comments
 const obj5 = {
-comment_upload(comment,username, answer_id){
+comment_upload(comment,username, answer_id,){
    $.ajax({
     header: {"Access-Control-Allow-Origin" :"*"},
     datatype:'json',
@@ -115,7 +115,7 @@ postAnswer( username, post_id ,answer){
 //show or hide comments
 const obj7={
 
-  showHide(answer_id){
+  showHide(answer_id , id){
     $.ajax({
       header: {"Access-Control-Allow-Origin" :"*"},
       type: 'GET',
@@ -178,7 +178,7 @@ $('body').on('click', '#answer_content', function(){
 
      var id = $(this).parents()[1];
     if($(id).find('#comment-box').hasClass('hidden')){
-     obj7.showHide(answer_id);
+     obj7.showHide(answer_id, id);
 
     }
    else{

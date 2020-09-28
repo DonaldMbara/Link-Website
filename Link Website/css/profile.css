@@ -97,6 +97,14 @@
 
     }
 
+    .profile-form .btnsave-holder {
+      width: 100%;
+      left: -65px;
+      bottom: -20px;
+      position: relative;
+
+    }
+
     button {
         font-family: "Roboto", sans-serif;
         border: 1px solid black;
@@ -152,6 +160,20 @@
 
 
         }
+
+        .save-btn {
+            background-color: 	#00FFFF;
+            width: 10%;
+            left: 57%;
+            font-size: 10px;
+            bottom:-10%;
+            position: absolute;
+            float: right;
+            /* display: inline-block;
+            word-wrap: break-word; */
+
+
+          }
 
     /*
     Profile pic

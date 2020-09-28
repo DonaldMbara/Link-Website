@@ -91,14 +91,65 @@
   </script>
 
     <script>
+
+    function saveEdits(){
+
+      var NEWlastname = document.getElementById('edit-lastname').value;
+      var NEWname = document.getElementById('edit-name').value;
+      var NEWusername = document.getElementById('edit-username').value;
+      var NEWemail = document.getElementById('edit-email').value;
+      var s = localStorage.getItem("key");
+      let static_studentNumber = s;
+      if (NEWlastname.length < 1 || NEWname.length < 1 || NEWusername.length < 1 || NEWemail.length < 1) {
+          alert("All Fields are Required");
+      }else{
+
+        $.ajax({
+         header: {"Access-Control-Allow-Origin" :"*"},
+         type: "POST",
+         url: 'https://lamp.ms.wits.ac.za/~s1819369/editinfo.php',
+         data: {
+             studentno: static_studentNumber,
+             lastname :NEWlastname,
+             firstname :NEWname,
+             username :NEWusername,
+             email :NEWemail
+
+         },
+         success: function (data) {
+            alert(data);
+            window.location.href = "../html/profile.html";
+         },
+     });
+
+      }
+    }
+
+    function editProfile( lastnameE, nameE, usernameE,emailE){
+
+      document.getElementById('text1').innerHTML = document.getElementById(lastnameE).innerHTML;
+      document.getElementById('text2').innerHTML = document.getElementById(nameE).innerHTML;
+      document.getElementById('text3').innerHTML = document.getElementById(usernameE).innerHTML;
+      document.getElementById('text4').innerHTML = document.getElementById(emailE).innerHTML;
+
+
+      document.getElementById('SaveB').style.display = "block";
+
+    }
+
+
     function showSets(){
-      // alert("I was clicked");
+
+
       if(document.getElementById('DelB').style.display == "none" && document.getElementById('EdiB').style.display == "none"){
       document.getElementById('DelB').style.display = "block";
       document.getElementById('EdiB').style.display = "block";
     }else{
       document.getElementById('DelB').style.display = "none";
       document.getElementById('EdiB').style.display = "none";
+      document.getElementById('SaveB').style.display = "none";
+      window.location.href = "../html/profile.html";
+
     }
     }
 
@@ -214,25 +265,47 @@
 
         </div>
 
+        <div id="lastnameBox" class="textbox" style="display: none">
+            <i aria-hidden="true"></i>
+            <input type="text" id="edit-lastname" placeholder="Lastname" name="edit_lastname" value="">
+
+        </div>
+
+        <div id="nameBox" class="textbox" style="display: none">
+            <i aria-hidden="true"></i>
+            <input type="text" id="edit-name" placeholder="Name" name="edit_name" value="">
+
+        </div>
+
+        <div id="usernameBox" class="textbox" style="display: none">
+            <i aria-hidden="true"></i>
+            <input type="text" id="edit-username" placeholder="Username" name="edit_username" value="">
+
+        </div>
+
+        <div id="emailBox" class="textbox" style="display: none">
+            <i aria-hidden="true"></i>
+            <input type="text" id="edit-email" placeholder="Email" name="edit_email" value="">
+
+        </div>
 
         <div class="btns-holder">
-                  <button class="settings-btn" onclick="showSets(2)"><i class="fa fa-cog"></i></button>
+                  <button class="settings-btn" onclick="showSets()"><i class="fa fa-cog"></i></button>
         </div>
 
         <div id="EdiB" class="btne-holder" style="display: none">
-                  <button class="edit-btn" onclick="alert()">Edit Info</button>
+                  <button class="edit-btn" onclick="editProfile('lastnameBox', 'nameBox','usernameBox','emailBox')">Edit Info</button>
         </div>
 
         <div id="DelB" class="btnd-holder" style="display: none">
                   <button  class="delete-btn" onclick="deleteProfile()" >Dlt Prfle</button>
         </div>
+
+        <div id="SaveB" class="btnsave-holder" style="display: none">
+                  <button  class="save-btn" onclick="saveEdits()" >Save</button>
+        </div>
+
       </div>
-
-
-
-
-
-
 
 
 

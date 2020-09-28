@@ -89,6 +89,58 @@
       }
     }
   </script>
+
+    <script>
+    function showSets(){
+      // alert("I was clicked");
+      if(document.getElementById('DelB').style.display == "none" && document.getElementById('EdiB').style.display == "none"){
+      document.getElementById('DelB').style.display = "block";
+      document.getElementById('EdiB').style.display = "block";
+    }else{
+      document.getElementById('DelB').style.display = "none";
+      document.getElementById('EdiB').style.display = "none";
+    }
+    }
+
+    function deleteProfile(){
+      if (confirm('You are about to delete your profile from Link!')) {
+        $(document).ready(function () {
+          var response = '';
+
+
+          var st = localStorage.getItem("key");
+          let static_studentNumber = st;
+
+
+          $.ajax({
+            header: {"Access-Control-Allow-Origin" : "*"},
+            type: "POST",
+            url: 'https://lamp.ms.wits.ac.za/~s1819369/delaccount.php',
+
+            data: {
+              studentNo : static_studentNumber
+            },
+            success : function(output){
+
+
+            }
+
+            });
+          }
+            );
+            alert("Your Account was successfully deleted");
+            window.location.href = "../html/login.html";
+
+      }
+
+     else {
+        // Do nothing!
+    console.log('Thing was not saved to the database.');
+      }
+    }
+    </script>
+
+
   <script>
     function previewFile(input){
         if (input.files && input.files[0]) {
@@ -163,22 +215,31 @@
         </div>
 
 
+        <div class="btns-holder">
+                  <button class="settings-btn" onclick="showSets(2)"><i class="fa fa-cog"></i></button>
+        </div>
 
+        <div id="EdiB" class="btne-holder" style="display: none">
+                  <button class="edit-btn" onclick="alert()">Edit Info</button>
+        </div>
+
+        <div id="DelB" class="btnd-holder" style="display: none">
+                  <button  class="delete-btn" onclick="deleteProfile()" >Dlt Prfle</button>
+        </div>
       </div>
+
+
+
+
+
+
 
 
 
     </div>
 
     <div class="container">
-  <div class="btn-holder">
 
-        <!-- This will direct to chats, for now its the home page -->
-
-
-
-            <button id="view_chats"  onclick="window.location = '../html/chats_users.html'" name="" style="position: absolute; : 0">View Chats</button> <!--need username-->
-  </div>
 
   <div class="btnc-holder">
 

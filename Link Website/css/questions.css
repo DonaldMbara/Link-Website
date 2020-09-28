@@ -1,6 +1,7 @@
 
 body {
     position:relative;
+    background: linear-gradient(to left, #8942a8, #ba382f );
 }
 
 #Chat {
@@ -49,7 +50,7 @@ body {
     padding-right: 200px;
   }
   .card{
-    background-color:#09736b;
+    background-color:lightyellow;
     padding: 10px;
   }
   #like_button{

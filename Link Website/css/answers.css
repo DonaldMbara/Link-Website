@@ -2,7 +2,7 @@
 
 body {
   position:relative;
-    background-color: #008577;
+    background: linear-gradient(to left, #8942a8, #ba382f );
 }
 
 #Chat {
@@ -49,7 +49,7 @@ body {
   text-align: center;
 }
 .answer_card{
-  background-color:#19665f;
+  background-color:#0b8dde;
 }
 #cont{
   margin-top: 60px;

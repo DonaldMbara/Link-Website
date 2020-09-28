@@ -33,7 +33,7 @@ describe('User Model', function(){
   it('shows/hides error banner', function() {
   expect(obj5.comment_upload('comment', 'MJ', 12)).toBe(1);
   expect(obj6.postAnswer('MJ', 12, 'ANSWER')).toBe(1);
-  expect(obj7.showHide(12)).toBe(1);
+  expect(obj7.showHide(12,1)).toBe(1);
 
 });
 });

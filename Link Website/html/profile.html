@@ -70,16 +70,18 @@
                     eDate = obj.eDate;
 
                     // alert(e_mail);
-                    if (  CourseId === undefined){
+                    if (  CourseId === undefined && sDate === undefined && eDate === undefined){
                       $('#prof').html("Profession (Tutoring) : ".concat("None"));
+                      $('#myPopup').html("None" + "<hr>" +" Starting Date: ".concat("None") + " </br> " + "Ending Date : ".concat("None") );
+
 
                     }
                     else {
-                      $('#prof').html("Profession (Tutoring) : ".concat(CourseId));
+                      $('#prof').html("Profession (Tutoring) : ".concat(CourseId) + " (Pending)");
 
                     }
 
-                    $('#myPopup').html("Tutoring"+" <hr>" +" Starting Date: ".concat(sDate) + " </br> " + "Ending Date : ".concat(eDate) );
+                    $('#myPopup').html("Transcript Verification in process"+" <hr>" +" Starting Date: ".concat(sDate) + " </br> " + "Ending Date : ".concat(eDate) );
 
                   }
 

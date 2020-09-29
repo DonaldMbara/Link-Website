@@ -11,7 +11,6 @@ function getDetails(receiver_stud,sender_stud) {
         },
         success: function (data, status){
             var data = jQuery.parseJSON(data);
-            alert(current_user);
             var output = '<div class="container">';
             $.each(data, function(key, value){
               if(value.sender_id == current_user){
@@ -61,5 +60,64 @@ function p1(vals){
 function n1(vals){
 
     return vals.filter((x) => { return x < 0; });
+
 }
-module.exports = { s1, p1, n1};
+
+
+const obj8 = {
+ s1(vals){
+
+    let sum = 0;
+
+    vals.forEach((val) => {
+        sum += val;
+    });
+
+    return sum;
+}
+};
+
+const obj9 = {
+p1(vals){
+
+    return vals.filter((x) => { return x > 0; });
+}
+
+}
+
+obj10 = {
+n1(vals){
+
+    return vals.filter((x) => { return x < 0; });
+}
+}
+
+
+const obj11 = {
+ s1(vals){
+
+    let sum = 0;
+
+    vals.forEach((val) => {
+        sum += val;
+    });
+
+    return sum;
+}
+};
+
+const obj12 = {
+p1(vals){
+
+    return vals.filter((x) => { return x > 0; });
+}
+
+}
+
+obj13 = {
+n1(vals){
+
+    return vals.filter((x) => { return x < 0; });
+}
+}
+module.exports = { s1, p1, n1,obj8,obj9,obj10,obj11,obj12,obj13};

@@ -7,7 +7,7 @@ var $ = require('jquery');
 window.$ = $;
 
 describe('vals', function(){
-const { sum, positive, negative, s1,p1,n1,s2,p2,n2 } = require('./login');
+const { sum, positive, negative, s1,p1,n1,s2,p2,n2 } = require('./profession');
 let vals;
 let sum_of_vals;
 let pos_vals;

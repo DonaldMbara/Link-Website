@@ -21,14 +21,14 @@ describe('validateSubmits', function() {
 describe('', function() {
   it('functions run', function() {
 
-  const { sum, positive, negative, class1,class2} = require('./questions');
+  const { sum, positive, negative, class1,class2,s1,p1,n1,s2,p2,n2} = require('./questions');
   expect(class1.questions(12)).toBe(1);
   expect(class2.search('inputVal',12)).toBe(1);
 });
 });
 
 describe('vals', function(){
-const { sum, positive, negative, class1 , class2} = require('./questions');
+  const { sum, positive, negative, class1,class2,s1,p1,n1,s2,p2,n2} = require('./questions');
 let vals;
 let sum_of_vals;
 let pos_vals;
@@ -51,5 +51,29 @@ test('should get positive values', () => {
 
 test('should get negative values', () => {
     expect(negative(vals)).toEqual(neg_vals);
+});
+
+test('should get negative values', () => {
+    expect(n1(vals)).toEqual(neg_vals);
+});
+
+test('should get positive values', () => {
+    expect(p1(vals)).toEqual(pos_vals);
+});
+
+test('the sum of vals should be 2', () => {
+    expect(s1(vals)).toBe(sum_of_vals);
+});
+
+test('should get negative values', () => {
+    expect(n2(vals)).toEqual(neg_vals);
+});
+
+test('should get positive values', () => {
+    expect(p2(vals)).toEqual(pos_vals);
+});
+
+test('the sum of vals should be 2', () => {
+    expect(s2(vals)).toBe(sum_of_vals);
 });
 });

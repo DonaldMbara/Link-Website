@@ -19,44 +19,27 @@ describe('validateSubmits', function() {
 });
 
 describe('User Model', function(){
+  const {obj,obj2,obj3,obj4,obj5,obj6, obj7} = require('./answers');
   it('shows/hides error banner', function() {
-  var ans = 'this is the answer';
-  var q_id = 12;
-  var user = ''
-  question = require('./answers'); //this imports the file i want to test
-  //question(ans, q_id)
+  expect(obj.getAnswers(12)).toBe(1);
+  expect(obj2.setUsername(12)).toBe(1);
+  expect(obj3.like(1, 12)).toBe(1);
+  expect(obj4.likeA(1, 12)).toBe(1);
+});
+});
+
+describe('User Model', function(){
+  const {obj,obj2,obj3,obj4,obj5,obj6,obj7} = require('./answers');
+  it('shows/hides error banner', function() {
+  expect(obj5.comment_upload('comment', 'MJ', 12)).toBe(1);
+  expect(obj6.postAnswer('MJ', 12, 'ANSWER')).toBe(1);
+  expect(obj7.showHide(12,1)).toBe(1);
 
 });
 });
 
 describe('vals', function(){
-
-const {obj2,obj3,obj4,obj5,obj6} = require('./answers');
-let vals;
-let sum_of_vals;
-let pos_vals;
-let neg_vals;
-
-beforeAll(() => {
-    bool = 1;
-    pos_vals = [2, 1, 3];
-    neg_vals = [-2, -1, -1];
-    vals = pos_vals.concat(neg_vals);
-    sum_of_vals = vals.reduce((x, y) => x + y, 0);
-})
-
-test('the sum of vals should be 2', () => {
-    expect(obj2.sum(vals)).toBe(sum_of_vals);
-});
-
-test('should get positive values', () => {
-    expect(obj3.positive(vals)).toEqual(pos_vals);
-});
-
-test('should get negative values', () => {
-    expect(obj4.negative(vals)).toEqual(neg_vals);
-});
-
+const {obj,obj2,obj3,obj4,obj5,obj6,obj7} = require('./answers');
 test('should get negative values', async () => {
 
   const somethingSpy = jest.spyOn(obj5, 'comment_upload').mockImplementation(()=>{

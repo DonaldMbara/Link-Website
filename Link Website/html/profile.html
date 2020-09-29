@@ -20,6 +20,80 @@
 
   <body>
 
+    <script>
+      $(document).ready(function (){
+        var response = '';
+
+
+        var s = localStorage.getItem("key");
+        let static_studentNumber = s;
+
+
+        $.ajax({
+          header: {"Access-Control-Allow-Origin" : "*"},
+          type: "GET",
+          url: 'https://lamp.ms.wits.ac.za/~s1819369/profile.php',
+
+          data: {
+            studentNo : static_studentNumber
+          },
+          success : function(output){
+            var obj = JSON.parse(output);
+            firstname = obj.FirstName;
+            surname = obj.LastName;
+            username = obj.Username;
+            e_mail = obj.email;
+            localStorage.setItem("Fname", firstname);
+            // alert(e_mail);
+            $('#text2').html("Name : ".concat(firstname));
+            $('#text1').html("LastName : ".concat(surname));
+            $('#text3').html("Username : ".concat(username));
+            $('#text4').html("Email : ".concat(e_mail));
+
+
+          }
+
+        });
+
+                $.ajax({
+                  header: {"Access-Control-Allow-Origin" : "*"},
+                  type: "GET",
+                  url: 'https://lamp.ms.wits.ac.za/~s1819369/fetchProf.php',
+
+                  data: {
+                    studentNo : static_studentNumber
+                  },
+                  success : function(output){
+                    var obj = JSON.parse(output);
+                    CourseId = obj.CourseID;
+                    sDate = obj.sDate;
+                    eDate = obj.eDate;
+
+                    // alert(e_mail);
+                    if (  CourseId === undefined && sDate === undefined && eDate === undefined){
+                      $('#prof').html("Profession (Tutoring) : ".concat("None"));
+                      $('#myPopup').html("None" + "<hr>" +" Starting Date: ".concat("None") + " </br> " + "Ending Date : ".concat("None") );
+
+
+                    }
+                    else {
+                      $('#prof').html("Profession (Tutoring) : ".concat(CourseId) + " (Pending)");
+
+                    }
+
+                    $('#myPopup').html("Transcript Verification in process"+" <hr>" +" Starting Date: ".concat(sDate) + " </br> " + "Ending Date : ".concat(eDate) );
+
+                  }
+
+                });
+
+        // When the user clicks on div, open the popup
+
+    }
+      );
+
+    </script>
+
   <script>
     window.onload = function() {
       // Get the modal
@@ -49,6 +123,109 @@
       }
     }
   </script>
+
+    <script>
+
+    function saveEdits(){
+
+      var NEWlastname = document.getElementById('edit-lastname').value;
+      var NEWname = document.getElementById('edit-name').value;
+      var NEWusername = document.getElementById('edit-username').value;
+      var NEWemail = document.getElementById('edit-email').value;
+      var s = localStorage.getItem("key");
+      let static_studentNumber = s;
+      if (NEWlastname.length < 1 || NEWname.length < 1 || NEWusername.length < 1 || NEWemail.length < 1) {
+          alert("All Fields are Required");
+      }else{
+
+        $.ajax({
+         header: {"Access-Control-Allow-Origin" :"*"},
+         type: "POST",
+         url: 'https://lamp.ms.wits.ac.za/~s1819369/editinfo.php',
+         data: {
+             studentno: static_studentNumber,
+             lastname :NEWlastname,
+             firstname :NEWname,
+             username :NEWusername,
+             email :NEWemail
+
+         },
+         success: function (data) {
+            alert(data);
+            window.location.href = "../html/profile.html";
+         },
+     });
+
+      }
+    }
+
+    function editProfile( lastnameE, nameE, usernameE,emailE){
+
+      document.getElementById('text1').innerHTML = document.getElementById(lastnameE).innerHTML;
+      document.getElementById('text2').innerHTML = document.getElementById(nameE).innerHTML;
+      document.getElementById('text3').innerHTML = document.getElementById(usernameE).innerHTML;
+      document.getElementById('text4').innerHTML = document.getElementById(emailE).innerHTML;
+
+
+      document.getElementById('SaveB').style.display = "block";
+
+    }
+
+
+    function showSets(){
+
+
+      if(document.getElementById('DelB').style.display == "none" && document.getElementById('EdiB').style.display == "none"){
+      document.getElementById('DelB').style.display = "block";
+      document.getElementById('EdiB').style.display = "block";
+    }else{
+      document.getElementById('DelB').style.display = "none";
+      document.getElementById('EdiB').style.display = "none";
+      document.getElementById('SaveB').style.display = "none";
+      window.location.href = "../html/profile.html";
+
+    }
+    }
+
+    function deleteProfile(){
+      if (confirm('You are about to delete your profile from Link!')) {
+        $(document).ready(function () {
+          var response = '';
+
+
+          var st = localStorage.getItem("key");
+          let static_studentNumber = st;
+
+
+          $.ajax({
+            header: {"Access-Control-Allow-Origin" : "*"},
+            type: "POST",
+            url: 'https://lamp.ms.wits.ac.za/~s1819369/delaccount.php',
+
+            data: {
+              studentNo : static_studentNumber
+            },
+            success : function(output){
+
+
+            }
+
+            });
+          }
+            );
+            alert("Your Account was successfully deleted");
+            window.location.href = "../html/login.html";
+
+      }
+
+     else {
+        // Do nothing!
+    console.log('Thing was not saved to the database.');
+      }
+    }
+    </script>
+
+
   <script>
     function previewFile(input){
         if (input.files && input.files[0]) {
@@ -95,30 +272,16 @@
         </div>
 
 
-        <button id="myBtn"><i class="fa fa-camera" aria-hidden="true"></i>
-        </button>
 
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
 
-          <!-- Modal content -->
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Upload picture</p>
-            <form method="post"  enctype="multipart/form-data">
-              <label>Select Image File:</label>
-              <input type="file" id="file" onchange="previewFile(this);" name="image" required>
-              <input type="submit"  id="upload" name="submit" value="Upload">
-            </form>
-            <!-- Display response messages -->
-            <?php if(!empty($resMessage)) {?>
-            <div class="alert <?php echo $resMessage['status']?>">
-              <?php echo $resMessage['message']?>
-            </div>
-            <?php }?>
+        <div class="popup">
+          <div onclick="myFunction()" id="prof" class="contents">
+            <!-- For now-->
+            Profession loading...
+
           </div>
-
+          <span class="popuptext" id="myPopup">None</span>
         </div>
 
 
@@ -142,7 +305,45 @@
 
         </div>
 
+        <div id="lastnameBox" class="textbox" style="display: none">
+            <i aria-hidden="true"></i>
+            <input type="text" id="edit-lastname" placeholder="Lastname" name="edit_lastname" value="">
 
+        </div>
+
+        <div id="nameBox" class="textbox" style="display: none">
+            <i aria-hidden="true"></i>
+            <input type="text" id="edit-name" placeholder="Name" name="edit_name" value="">
+
+        </div>
+
+        <div id="usernameBox" class="textbox" style="display: none">
+            <i aria-hidden="true"></i>
+            <input type="text" id="edit-username" placeholder="Username" name="edit_username" value="">
+
+        </div>
+
+        <div id="emailBox" class="textbox" style="display: none">
+            <i aria-hidden="true"></i>
+            <input type="text" id="edit-email" placeholder="Email" name="edit_email" value="">
+
+        </div>
+
+        <div class="btns-holder">
+                  <button class="settings-btn" onclick="showSets()"><i class="fa fa-cog"></i></button>
+        </div>
+
+        <div id="EdiB" class="btne-holder" style="display: none">
+                  <button class="edit-btn" onclick="editProfile('lastnameBox', 'nameBox','usernameBox','emailBox')">Edit Info</button>
+        </div>
+
+        <div id="DelB" class="btnd-holder" style="display: none">
+                  <button  class="delete-btn" onclick="deleteProfile()" >Dlt Prfle</button>
+        </div>
+
+        <div id="SaveB" class="btnsave-holder" style="display: none">
+                  <button  class="save-btn" onclick="saveEdits()" >Save</button>
+        </div>
 
       </div>
 
@@ -151,14 +352,7 @@
     </div>
 
     <div class="container">
-  <div class="btn-holder">
 
-        <!-- This will direct to chats, for now its the home page -->
-
-
-
-            <button id="view_chats"  onclick="window.location = '../html/chats_users.html'" name="" style="position: absolute; : 0">View Chats</button> <!--need username-->
-  </div>
 
   <div class="btnc-holder">
 
@@ -173,11 +367,13 @@
 </div>
 
 
-
-
-
-
-
+    <script>
+      // When the user clicks on div, open the popup
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+    </script>
 
   </body>
 </html>

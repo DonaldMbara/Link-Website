@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Log Event</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/log.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src = "../js/profession.js" async=""></script>
+</head>
+<body>
+
+
+
+<div class="wrapper">
+    <div id="log-from" class="log-form">
+
+
+
+        <hr>
+        <div  class="contents">
+            <h1>Profession </h1>
+
+        </div>
+        <hr>
+        <div  class="contents">
+            <form  id = "prof_form" method="post" >
+                <p><h4><i>Apply for course to tutor</i></h4></p>
+                <label for="course">Choose course to tutor:</label>
+                <select name="course" id="course"  >
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option class = "Science" id="COMS" > COMS</option>
+                    <option class = "Science" id="APPM" > APPM</option>
+                    <option class = "Science" id="PHYSICS">PHYSICS</option>
+                    <option class = "Science" id="MATHEMATICS" >MATHEMATICS</option>
+                    <option class = "Commerce" id="ACCOUNTING SCIENCE" >ACCOUNTING SCIENCE</option>
+                    <option class = "Commerce" id="ECONOMICS" >ECONOMICS</option>
+                    <option class = "Commerce" id="FINANCE" >FINANCE</option>
+                    <option class = "Health Science" id="DENTAL SCIENCE"  > DENTAL SCIENCE</option>
+                    <option class = "Commerce" id="DIGITAL ARTS">DIGITAL ARTS</option>
+                    <option class = "Health Science" id="MEDICINE AND SURGERY" >MEDICINE AND SURGERY</option>
+                    <option class = "Health Science" id="PHYSIOTHERAPY" > PHYSIOTHERAPY</option>
+                    <option class = "Humanities" id="EDUCATION"> EDUCATION</option>
+                </select>
+                <br><br>
+                <label for="datemax">Enter the starting period of the course:</label>
+                <input type="date" id="datemax" name="datemax" max="2020-12-12"><br><br>
+
+                <label for="datemin">Enter the ending period of the course:</label>
+                <input type="date" id="datemin" name="datemin" min="2010-01-01"><br><br>
+                    <hr>
+                    <p>Upload your transcript</p>
+                    <hr>
+                    <label for="img">Select image:</label>
+                    <input type="file" id="img" name="img" accept="image/*">
+                    <input type="submit" id="apply" value="Apply">
+
+
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div class="btnc-holder">
+
+    </div>
+
+</div>
+</body>
+</html>

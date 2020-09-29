@@ -8,6 +8,7 @@ $(document).ready(function () {
 
 
 
+
         $(".error").remove(); //removing everything else that is in the span before using it
 
         //Checking validation of our inputs
@@ -46,7 +47,7 @@ $(document).ready(function () {
                     alert(response);
                     if(response === 'data matched'){
                         window.location = 'home.html?username='+ encodeURIComponent(username); //passed the username with the link, now check home.html at the top
-                        localStorage.setItem("studNo", studentNo);
+                        localStorage.setItem("key", studentNo);
                     }
                     if(response === 'try again'){
                         alert('Invalid Credentials')
@@ -55,10 +56,27 @@ $(document).ready(function () {
                 },
             });
 
-
-
-
-
-
     });
 });
+
+const sum = (vals) => {
+
+    let sum = 0;
+
+    vals.forEach((val) => {
+        sum += val;
+    });
+
+    return sum;
+}
+
+const positive = (vals) => {
+
+    return vals.filter((x) => { return x > 0; });
+}
+
+const negative = (vals) => {
+
+    return vals.filter((x) => { return x < 0; });
+}
+module.exports = { sum, positive, negative};

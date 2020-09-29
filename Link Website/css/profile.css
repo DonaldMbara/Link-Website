@@ -25,7 +25,7 @@
     }
     #myBtn{
 
-        width: 5%;
+        width: 10%;
         height: 15%;
         font-size: 8pt;
         font-family: tahoma;
@@ -45,11 +45,13 @@
     }
 
     .profile-form{
-      max-width: 550px;
+      max-width: 600px;
+      max-height: 600px;
       margin: 0 auto;
       background: lightyellow;
+      /* background: #9400D3; */
       padding: 30px;
-      border-radius: 5px;
+      border-radius: 10px;
 
     }
 
@@ -65,10 +67,43 @@
     }
 
     .container .btnc-holder {
+      width: 20%;
+      right: 40%;
       justify-content: flex-end;
       display: flex;
     }
 
+    .profile-form .btns-holder {
+      width: 100%;
+      left: 200px;
+      bottom: 220px;
+      position: relative;
+
+    }
+
+    .profile-form .btne-holder {
+      width: 100%;
+      left: 200px;
+      bottom: 190px;
+      position: relative;
+
+    }
+
+    .profile-form .btnd-holder {
+      width: 100%;
+      left: 200px;
+      bottom: 190px;
+      position: relative;
+
+    }
+
+    .profile-form .btnsave-holder {
+      width: 100%;
+      left: -65px;
+      bottom: -20px;
+      position: relative;
+
+    }
 
     button {
         font-family: "Roboto", sans-serif;
@@ -84,41 +119,123 @@
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
     }
+  .settings-btn {
+      background-color: #A9A9A9;
+      border-radius: 12px;
+      width: 5%;
+      left: 60%;
+      bottom:-10%;
+      position: absolute;
+      float: right;
+      /* display: inline-block;
+      word-wrap: break-word; */
+
+
+    }
+    .edit-btn {
+        background-color: #008000;
+        width: 10%;
+        left: 45%;
+        font-size: 10px;
+        border-radius: 3px;
+        bottom: 0px;
+        position: absolute;
+        float: right;
+        /* display: inline-block;
+        word-wrap: break-word; */
+
+
+      }
+
+      .delete-btn {
+          background-color: #FF0000;
+          width: 10%;
+          left: 57%;
+          font-size: 10px;
+          bottom:-10%;
+          position: absolute;
+          float: right;
+          /* display: inline-block;
+          word-wrap: break-word; */
+
+
+        }
+
+        .save-btn {
+            background-color: 	#00FFFF;
+            width: 10%;
+            left: 57%;
+            font-size: 10px;
+            bottom:-10%;
+            position: absolute;
+            float: right;
+            /* display: inline-block;
+            word-wrap: break-word; */
+
+
+          }
 
     /*
     Profile pic
      */
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    justify-content: center;
+    display: flex;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
 }
 
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
 }
 
 .close:hover,

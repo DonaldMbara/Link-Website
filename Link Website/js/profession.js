@@ -34,6 +34,8 @@ $(document).ready(function () {
                 success: function (data) {
 
                     alert(data);
+                    window.location.href = "../html/profile.html";
+
 
                 },
             });

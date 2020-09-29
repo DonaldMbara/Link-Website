@@ -1,26 +1,3 @@
-var userid;
-var username = "noName";
-
-const obj = {
-  getAnswers(post_id){
-    $.ajax({
-      header: {"Access-Control-Allow-Origin" :"*"},
-      type: 'GET',
-      url:'https://lamp.ms.wits.ac.za/~s1819369/Sort.php',
-      data:{post_id : post_id},
-      datatype:'json',
-      success: function (data, status){
-         var data = jQuery.parseJSON(data);
-         var source = $("#answers_template").html();
-         var template = Handlebars.compile(source);
-         $('body').append(template(data));
-
- }
- });
-
-  return 1;
-}
-};
 
 //sets the username
 const obj2 = {

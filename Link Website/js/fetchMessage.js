@@ -1,3 +1,45 @@
+function getDetails(receiver_stud,sender_stud) {
+    var current_user = localStorage.getItem("studNo");
+    $.ajax({
+        header: {"Access-Control-Allow-Origin": "*"},
+        datatype: 'json',
+        type: "POST",
+        url: 'https://lamp.ms.wits.ac.za/~s1819369/fetch_messages.php',
+        data: {
+            id: sender_stud,
+            userid: receiver_stud
+        },
+        success: function (data, status){
+            var data = jQuery.parseJSON(data);
+            var output = '<div class="container">';
+            $.each(data, function(key, value){
+              if(value.sender_id == current_user){
+
+                output += '<div id = "right" class="right_message_card">';
+                output += '<div id = "i_holder" class="div">';
+                output += '<i class="fa fa-ellipsis-v option" id ='+ value.id+'>'+'</i>';
+                output += '<div class="dropdown-content">'
+                output += '<a class="delete" href="#">'+ "delete" +'</a>'
+                output += '</div>';
+                output += '</div>';
+                output += '<p id="comment_p">' + value.message + '</p>';
+                output += '</div>';
+                 }
+               else{
+                 output += '<div id = "left" class = "left_message_card">';
+                 output += '<p id="comment_p">' + value.message + '</p>';
+                 output += '</div>';
+               };
+
+                });
+            output += '</div>';
+            $('.chatlogs').html(output);
+      }
+    });
+    // alert(name);
+
+};
+
 
 function s1(vals){
 

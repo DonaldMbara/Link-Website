@@ -108,7 +108,8 @@
     button {
         font-family: "Roboto", sans-serif;
         border: 1px solid black;
-        background-color: #008577;
+        background-color: #ba382f;
+        border-radius: 12px;
         color: black;
         width: 20%;
         right: 40%;

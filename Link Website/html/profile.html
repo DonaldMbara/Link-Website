@@ -55,6 +55,38 @@
 
         });
 
+                $.ajax({
+                  header: {"Access-Control-Allow-Origin" : "*"},
+                  type: "GET",
+                  url: 'https://lamp.ms.wits.ac.za/~s1819369/fetchProf.php',
+
+                  data: {
+                    studentNo : static_studentNumber
+                  },
+                  success : function(output){
+                    var obj = JSON.parse(output);
+                    CourseId = obj.CourseID;
+                    sDate = obj.sDate;
+                    eDate = obj.eDate;
+
+                    // alert(e_mail);
+                    if (  CourseId === undefined){
+                      $('#prof').html("Profession (Tutoring) : ".concat("None"));
+
+                    }
+                    else {
+                      $('#prof').html("Profession (Tutoring) : ".concat(CourseId));
+
+                    }
+
+                    $('#myPopup').html("Tutoring"+" <hr>" +" Starting Date: ".concat(sDate) + " </br> " + "Ending Date : ".concat(eDate) );
+
+                  }
+
+                });
+
+        // When the user clicks on div, open the popup
+
     }
       );
 
@@ -240,11 +272,17 @@
 
 
 
-        <div id="prof" class="contents">
-          <!-- For now-->
-          Profession : None
 
+        <div class="popup">
+          <div onclick="myFunction()" id="prof" class="contents">
+            <!-- For now-->
+            Profession loading...
+
+          </div>
+          <span class="popuptext" id="myPopup">None</span>
         </div>
+
+
         <div id="text1" class="contents">
           surname Loading...
 
@@ -327,11 +365,13 @@
 </div>
 
 
-
-
-
-
-
+    <script>
+      // When the user clicks on div, open the popup
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+    </script>
 
   </body>
 </html>

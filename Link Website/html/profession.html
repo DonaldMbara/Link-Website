@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src = "../js/logevent.js" async=""></script>
+    <script src = "../js/profession.js" async=""></script>
 </head>
 <body>
 
@@ -27,22 +27,22 @@
         </div>
         <hr>
         <div  class="contents">
-            <form action="">
+            <form  id = "prof_form" method="post" >
                 <p><h4><i>Apply for course to tutor</i></h4></p>
                 <label for="course">Choose course to tutor:</label>
                 <select name="course" id="course">
-                    <option class = "Science" id="COMS" value = "COMS"  onclick="setValue('COMS'); setName('1')"> COMS</option>
-                    <option class = "Science" id="APPM" onclick="setValue('APPM');setName('2')"> APPM</option>
-                    <option class = "Science" id="PHYSICS" onclick="setValue('PHYSICS');setName('4')">PHYSICS</option>
-                    <option class = "Science" id="MATHEMATICS" onclick="setValue('MATHEMATICS');setName('3')">MATHEMATICS</option>
-                    <option class = "Commerce" id="ACCOUNTING SCIENCE" onclick="setValue('ACCOUNTING SCIENCE');setName('5')">ACCOUNTING SCIENCE</option>
-                    <option class = "Commerce" id="ECONOMICS" onclick="setValue('ECONOMICS');setName('6')">ECONOMICS</option>
-                    <option class = "Commerce" id="FINANCE" onclick="setValue('FINANCE');setName('7')">FINANCE</option>
-                    <option class = "Health Science" id="DENTAL SCIENCE"  onclick="setValue('DENTAL SCIENCE');setName('9')"> DENTAL SCIENCE</option>
-                    <option class = "Commerce" id="DIGITAL ARTS" onclick="setName('11');setValue('DIGITAL ARTS');">DIGITAL ARTS</option>
-                    <option class = "Health Science" id="MEDICINE AND SURGERY" onclick="setValue('MEDICINE AND SURGERY');setName('10')">MEDICINE AND SURGERY</option>
-                    <option class = "Health Science" id="PHYSIOTHERAPY" onclick="setValue('PHYSIOTHERAPY');setName('8')"> PHYSIOTHERAPY</option>
-                    <option class = "Humanities" id="EDUCATION" onclick="setValue('EDUCATION');setName('12')"> EDUCATION</option>
+                    <option class = "Science" id="COMS" > COMS</option>
+                    <option class = "Science" id="APPM" > APPM</option>
+                    <option class = "Science" id="PHYSICS">PHYSICS</option>
+                    <option class = "Science" id="MATHEMATICS" >MATHEMATICS</option>
+                    <option class = "Commerce" id="ACCOUNTING SCIENCE" >ACCOUNTING SCIENCE</option>
+                    <option class = "Commerce" id="ECONOMICS" >ECONOMICS</option>
+                    <option class = "Commerce" id="FINANCE" >FINANCE</option>
+                    <option class = "Health Science" id="DENTAL SCIENCE"  > DENTAL SCIENCE</option>
+                    <option class = "Commerce" id="DIGITAL ARTS">DIGITAL ARTS</option>
+                    <option class = "Health Science" id="MEDICINE AND SURGERY" >MEDICINE AND SURGERY</option>
+                    <option class = "Health Science" id="PHYSIOTHERAPY" > PHYSIOTHERAPY</option>
+                    <option class = "Humanities" id="EDUCATION"> EDUCATION</option>
                 </select>
                 <br><br>
                 <label for="datemax">Enter the starting period of the course:</label>
@@ -50,15 +50,13 @@
 
                 <label for="datemin">Enter the ending period of the course:</label>
                 <input type="date" id="datemin" name="datemin" min="2010-01-01"><br><br>
-
-                <form action="">
                     <hr>
-                    <p>Upload your transcript(unsure about this)</p>
+                    <p>Upload your transcript</p>
                     <hr>
                     <label for="img">Select image:</label>
                     <input type="file" id="img" name="img" accept="image/*">
-                    <input type="submit" value="Apply">
-                </form>
+                    <input type="submit" id="apply" value="Apply">
+
 
             </form>
         </div>

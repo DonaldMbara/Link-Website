@@ -1,21 +1,25 @@
-const sum = (vals) => {
+const { sum, positive, negative } = require('./users');
 
-    let sum = 0;
+let vals;
+let sum_of_vals;
+let pos_vals;
+let neg_vals;
 
-    vals.forEach((val) => {
-        sum += val;
-    });
+beforeAll(() => {
+    pos_vals = [2, 1, 3];
+    neg_vals = [-2, -1, -1];
+    vals = pos_vals.concat(neg_vals);
+    sum_of_vals = vals.reduce((x, y) => x + y, 0);
+})
 
-    return sum;
-}
+test('the sum of vals should be 2', () => {
+    expect(sum(vals)).toBe(sum_of_vals);
+});
 
-const positive = (vals) => {
+test('should get positive values', () => {
+    expect(positive(vals)).toEqual(pos_vals);
+});
 
-    return vals.filter((x) => { return x > 0; });
-}
-
-const negative = (vals) => {
-
-    return vals.filter((x) => { return x < 0; });
-}
-module.exports = { sum, positive, negative};
+test('should get negative values', () => {
+    expect(negative(vals)).toEqual(neg_vals);
+});

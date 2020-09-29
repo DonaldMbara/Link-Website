@@ -1,21 +1,14 @@
-const sum = (vals) => {
+const {isPalindrome, isAnagram,sum} = require('./main'); //this imports the file i want to test
+describe('testing string utilities', () => {
+    test.each(["racecar", "radar", "level", "refer", "deified", "civic"])(
+        'testing %s for palindrome', (word) => {
+            expect(isPalindrome(word)).toBeTruthy();
+        },
+    );
 
-    let sum = 0;
-
-    vals.forEach((val) => {
-        sum += val;
-    });
-
-    return sum;
-}
-
-const positive = (vals) => {
-
-    return vals.filter((x) => { return x > 0; });
-}
-
-const negative = (vals) => {
-
-    return vals.filter((x) => { return x < 0; });
-}
-module.exports = { sum, positive, negative};
+    test.each([["arc", "car"], ["cat", "act"], ["cider", "cried"]])(
+        'testing if %s and %s are anagrams ', (word1, word2) => {
+            expect(isAnagram(word1, word2)).toBeTruthy();
+        },
+    );
+});

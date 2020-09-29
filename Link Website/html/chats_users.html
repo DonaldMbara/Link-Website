@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,67 +32,37 @@
 
 </script>
 
-
-<h2  >Link Users
+<div class="cont-tag">
+<h2 id="users_tag" >Link Users
     <hr>
 </h2>
-<div class="w3-container" id="container" >
+<div class=" search-container" id="search-container">
+  <form class="form-inline d-flex justify-content-center md-form form-sm mt-0 sea2">
+    <input class="form-control form-control-sm ml-3 w-75 sea" style=" border-bottom: 1px solid #4dd0e1;  box-shadow: 0 1px 0 0 #4dd0e1;" id="txt-search" type="text" placeholder="find chat"
+       aria-label="Search">
+   </form>
+ </div>
 
-    <ul class="w3-ul w3-hoverable" >
-
+<div class="w3-container tab-cont" id="container" >
         <div id="table">
             <table></table>
     </div>
-
-    </ul>
-    <div class="message-box">
-        <h1 id="recName">Loading name...</h1>
-        <input type="button" onclick="location.href='../html/user_profile.html';" value="View Profile" />
-        <div class="chatbox">
-                <form name="form" id ="sending_message" method="post" >
-                    <div class="chatlogs">
-
-                        <script id="chats_template" type="text/x-handlebars-template">
-                            {{#each this}}
-                                <div class="container", id="cont">
-                                    <div class="card message_card"  id ="{{message_id}}">
-                                        <P id ="message",placeholder = "message"><h4 id><i>{{message}}</i></h4></P>
-                                        <P id="sender", placeholder = "sender"><h6><strong>{{sender}}</strong></h6></P>
-                                        <P id="time", placeholder = "--:--">{{time}}</P>
-                                        <p class="inline" id="date">{{date}}</p>
-                                    </div>
-                                </div>
-                            {{/each}}
-                        </script>
-
-
-
-                    </div>
-
-                    <div class="chat-form">
-                        <textarea id="message_input" placeholder="Type in your message here..."></textarea>
-
-                        <input class="button"  type="submit"  value="Send" id="send_message"  >
-
-                    </div>
-
-                </form>
-
-
-
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 
-
-
-
-
-
+<div class="message-box">
+   <div class="inline">
+    <h1 id="recName">Loading name...</h1>
+   </div>
+    <div class="chatbox">
+                <div class="chatlogs">
+                </div>
+              <div class="chat-form">
+                    <textarea id="message_input" placeholder="Type in your message here..."></textarea>
+                    <input class="button" type="submit" value="Send" id="send_message" >
+              </div>
+        </div>
+    </div>
 
 </body>
 </html>
-
-
-

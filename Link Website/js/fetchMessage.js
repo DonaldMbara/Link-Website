@@ -1,4 +1,5 @@
 function getDetails(receiver_stud,sender_stud) {
+    var current_user = localStorage.getItem("studNo");
     $.ajax({
         header: {"Access-Control-Allow-Origin": "*"},
         datatype: 'json',
@@ -8,41 +9,57 @@ function getDetails(receiver_stud,sender_stud) {
             id: sender_stud,
             userid: receiver_stud
         },
-        success: function (data, status) {
-
-
+        success: function (data, status){
             var data = jQuery.parseJSON(data);
-            var source = $("#chats_template").html();
-            var template = Handlebars.compile(source);
-            $('.chatlogs').append(template(data));
+            alert(current_user);
+            var output = '<div class="container">';
+            $.each(data, function(key, value){
+              if(value.sender_id == current_user){
 
-        }
+                output += '<div id = "right" class="right_message_card">';
+                output += '<div id = "i_holder" class="div">';
+                output += '<i class="fa fa-ellipsis-v option" id ='+ value.id+'>'+'</i>';
+                output += '<div class="dropdown-content">'
+                output += '<a class="delete" href="#">'+ "delete" +'</a>'
+                output += '</div>';
+                output += '</div>';
+                output += '<p id="comment_p">' + value.message + '</p>';
+                output += '</div>';
+                 }
+               else{
+                 output += '<div id = "left" class = "left_message_card">';
+                 output += '<p id="comment_p">' + value.message + '</p>';
+                 output += '</div>';
+               };
+
+                });
+            output += '</div>';
+            $('.chatlogs').html(output);
+      }
     });
-
-
     // alert(name);
 
+};
+
+
+function s1(vals){
+
+    let sum = 0;
+
+    vals.forEach((val) => {
+        sum += val;
+    });
+
+    return sum;
 }
 
+function p1(vals){
 
- const sum = (vals) => {
+    return vals.filter((x) => { return x > 0; });
+}
 
-     let sum = 0;
+function n1(vals){
 
-     vals.forEach((val) => {
-         sum += val;
-     });
-
-     return sum;
- }
-
- const positive = (vals) => {
-
-     return vals.filter((x) => { return x > 0; });
- }
-
- const negative = (vals) => {
-
-     return vals.filter((x) => { return x < 0; });
- }
- module.exports = { sum, positive, negative};
+    return vals.filter((x) => { return x < 0; });
+}
+module.exports = { s1, p1, n1};

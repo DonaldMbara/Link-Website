@@ -7,7 +7,7 @@ var $ = require('jquery');
 window.$ = $;
 
 describe('vals', function(){
-const { sum, positive, negative } = require('./fetchMessage');
+const { s1, p1, n1} = require('./fetchMessage');
 let vals;
 let sum_of_vals;
 let pos_vals;
@@ -22,14 +22,14 @@ beforeAll(() => {
 })
 
 test('the sum of vals should be 2', () => {
-    expect(sum(vals)).toBe(sum_of_vals);
+    expect(s1(vals)).toBe(sum_of_vals);
 });
 
 test('should get positive values', () => {
-    expect(positive(vals)).toEqual(pos_vals);
+    expect(p1(vals)).toEqual(pos_vals);
 });
 
 test('should get negative values', () => {
-    expect(negative(vals)).toEqual(neg_vals);
+    expect(n1(vals)).toEqual(neg_vals);
 });
 });

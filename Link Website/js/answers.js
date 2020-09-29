@@ -1,3 +1,5 @@
+var userid;
+var username = "noName";
 
 const obj = {
   getAnswers(post_id){
@@ -147,8 +149,7 @@ $(document).ready(function(){
    var question = localStorage.getItem("question");
    var date = localStorage.getItem("date");
    var likes = localStorage.getItem("likes");
-   var userid = localStorage.getItem("userid");
-   var username = "noName";
+   userid = localStorage.getItem("userid");
 
    $('.author').text(author);
    $('.question_content').text(question);

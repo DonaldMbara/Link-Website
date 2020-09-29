@@ -16,7 +16,7 @@ describe('validateSubmits', function() {
 });
 
 describe('vals', function(){
-const { sum1, positive1, negative1 } = require('./sendMessages');
+const { sum1, positive1, negative1, search , clear, delete_q} = require('./sendMessages');
 let vals;
 let sum_of_vals;
 let pos_vals;
@@ -40,5 +40,17 @@ test('should get positive values', () => {
 
 test('should get negative values', () => {
     expect(negative1(vals)).toEqual(neg_vals);
+});
+
+test('should get negative values', () => {
+    expect(search("this hdggs")).toBe(1);
+});
+
+test('should get negative values', () => {
+    expect(delete_q(11,12)).toBe(1);
+});
+
+test('should get negative values', () => {
+    expect(clear(11,12)).toBe(1);
 });
 });

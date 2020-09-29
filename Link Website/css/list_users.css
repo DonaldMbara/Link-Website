@@ -1,42 +1,125 @@
-#table {
-    font-size: large;
-    border:  5px solid white;
-    float: left;
-    width: 300px;
-    overflow-y: scroll;
-    height: 600px;
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
-    background-color: lightyellow;
-    padding-left:10px ;
+
+.cont-tag{
+width: 410px;
+float: left;
 }
-
+tr.border_bottom td {
+  width: 410px;
+  height: 40px;
+  border: 1px solid white;
+}
 header{
     background-color: #008577;
     text-align: center;
     position: fixed;
 }
 
+.inline{
+display: inline;
+}
+#table{
+  width: 400px;
+  overflow-y: scroll;
+  height: 580px;
 
+}
 
 body {
     background: #008577;
 
 
 }
+.chat-form{
+  bottom: 98%;
+  margin-right: 10px;
 
+}
 .message-box{
-
+    overflow-y: scroll;
     float: right;
-    width: 55%;
-    height: 620px;
-    border: 5px solid white;
+    width: 65.5%;
+    height: 675px;
+    border: 1px solid white;
+    top: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+#search-container{
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  padding-left: 70px;
+
+}
+
+.sea{
+  border-radius: 20px 20px;
+}
+
+.sea2{
+  width:200px;
+}
 
 #recName{
     text-align: center;
 }
+.border_bottom{
+  padding-top:  7px;
+  border-bottom: 1px solid white;
+}
 
+.tab-cont{
+  margin-top: 15px;
+}
+
+#i_holder2{
+  text-align: center;
+  border-radius: 40px 40px;
+  float: right;
+  width: 20px;
+  background-color: black;
+}
+
+
+/* Dropdown Button */
+#i_holder2 {
+ background-color: #4CAF50;
+ color: white;
+ border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+#i_holder2{
+ display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content2 {
+ display: none;
+ overflow:auto;
+ position: absolute;
+ background-color: #f1f1f1;
+ min-width: 100px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content2 a {
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content2 a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+#i_holder2:hover .dropdown-content2 {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+#i_holder2:hover .option2 {background-color: #3e8e41;}

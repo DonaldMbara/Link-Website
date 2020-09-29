@@ -1,14 +1,16 @@
 // live search
-  function search(inputVal, courseid){
+  function search(inputVal){
     $.ajax({
 
       header: {"Access-Control-Allow-Origin" :"*"},
       datatype:'json',
       type:'GET',
       url:"https://lamp.ms.wits.ac.za/~s1819369/liveS.php",
-      data:{term: inputVal},success:(function(data){
+      data:{term: inputVal},
+      cache: false,
+      success:(function(data){
          var data = jQuery.parseJSON(data);
-
+         $('body').find('#table').empty(); 
          var username = '';
          $.each(data, function (key, value) {
              username +=
@@ -26,7 +28,7 @@
          });
 
          //INSERTING ROWS INTO TABLE
-         $('#table').append(username);
+         $('body').find('#table').append(username);
 
           })
 
@@ -158,11 +160,11 @@ $(document).ready(function () {
 
 //searching for a question
 $('#txt-search').on("keyup input", function(){
-   $("#table").html('');
    var inputVal = $(this).val();
    if(inputVal.length){
-   search(inputVal);
+     search(inputVal);
      }
+
 
  });
 

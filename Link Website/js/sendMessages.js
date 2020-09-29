@@ -10,7 +10,7 @@
       cache: false,
       success:(function(data){
          var data = jQuery.parseJSON(data);
-         $('body').find('#table').empty(); 
+         $('body').find('#table').empty();
          var username = '';
          $.each(data, function (key, value) {
              username +=
@@ -160,6 +160,7 @@ $(document).ready(function () {
 
 //searching for a question
 $('#txt-search').on("keyup input", function(){
+  $('body').find('#table').empty(); 
    var inputVal = $(this).val();
    if(inputVal.length){
      search(inputVal);

@@ -36,7 +36,7 @@ function getDetails(receiver_stud,sender_stud) {
             $('.chatlogs').html(output);
       }
     });
-    // alert(name);
+     // getDetails(receiver_stud,sender_stud);
 
 };
 

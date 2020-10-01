@@ -47,6 +47,7 @@
 
 
 body {
-    background-image: url(../image/events.jpg);
+    background: linear-gradient(to left, #8942a8, #ba382f );
+    /* background-image: url(../image/events.jpg); */
     /* background: #008577; */
 }

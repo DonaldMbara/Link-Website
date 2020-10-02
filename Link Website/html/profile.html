@@ -44,6 +44,9 @@
             username = obj.Username;
             e_mail = obj.email;
             localStorage.setItem("Fname", username);
+            localStorage.setItem("FN", firstname);
+            localStorage.setItem("LN", surname);
+            localStorage.setItem("EM", e_mail);
             // alert(e_mail);
             $('#text2').html("Name : ".concat(firstname));
             $('#text1').html("LastName : ".concat(surname));
@@ -161,6 +164,15 @@
     }
 
     function editProfile( lastnameE, nameE, usernameE,emailE){
+      var ln = localStorage.getItem("LN");
+      var fn = localStorage.getItem("FN");
+      var un = localStorage.getItem("Fname");
+      var em = localStorage.getItem("EM");
+
+      document.getElementById('edit-lastname').setAttribute('value',ln);
+      document.getElementById('edit-name').setAttribute('value',fn);
+      document.getElementById('edit-username').setAttribute('value',un);
+      document.getElementById('edit-email').setAttribute('value',em);
 
       document.getElementById('text1').innerHTML = document.getElementById(lastnameE).innerHTML;
       document.getElementById('text2').innerHTML = document.getElementById(nameE).innerHTML;
@@ -308,25 +320,25 @@
 
         <div id="lastnameBox" class="textbox" style="display: none">
             <i aria-hidden="true"></i>
-            <input type="text" id="edit-lastname" placeholder="Lastname" name="edit_lastname" value="">
+            <input type="text" id="edit-lastname"  name="edit_lastname" value="">
 
         </div>
 
         <div id="nameBox" class="textbox" style="display: none">
             <i aria-hidden="true"></i>
-            <input type="text" id="edit-name" placeholder="Name" name="edit_name" value="">
+            <input type="text" id="edit-name"  name="edit_name" value="">
 
         </div>
 
         <div id="usernameBox" class="textbox" style="display: none">
             <i aria-hidden="true"></i>
-            <input type="text" id="edit-username" placeholder="Username" name="edit_username" value="">
+            <input type="text" id="edit-username"  name="edit_username" value="">
 
         </div>
 
         <div id="emailBox" class="textbox" style="display: none">
             <i aria-hidden="true"></i>
-            <input type="text" id="edit-email" placeholder="Email" name="edit_email" value="">
+            <input type="text" id="edit-email"  name="edit_email" value="">
 
         </div>
 

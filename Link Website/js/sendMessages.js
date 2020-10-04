@@ -1,4 +1,83 @@
 // live search
+  function search(inputVal){
+    $.ajax({
+
+      header: {"Access-Control-Allow-Origin" :"*"},
+      datatype:'json',
+      type:'GET',
+      url:"https://lamp.ms.wits.ac.za/~s1819369/liveS.php",
+      data:{term: inputVal},
+      cache: false,
+      success:(function(data){
+         var data = jQuery.parseJSON(data);
+         $('body').find('#table').empty();
+         var username = '';
+         $.each(data, function (key, value) {
+             username +=
+                 '<div class="border_bottom" >'  ;
+
+                 username += '<div id = "i_holder2" class="div">';
+                 username += '<i class="fa fa-ellipsis-v option2" id ='+value.StudentNo+'>'+'</i>';
+                 username += '<div class="dropdown-content2">';
+                  username += '<a class="delete2" href="#">'+ "clear" +'</a>';
+                  username += '</div>';
+                  username += '</div>';
+             username += '<p class="username" id ='+value.StudentNo+'>' +
+                 value.Username  +'</p>';
+             username +=  '</div>';
+         });
+
+         //INSERTING ROWS INTO TABLE
+         $('body').find('#table').append(username);
+
+          })
+
+       });
+       return 1;
+  };
+
+//delete question
+function delete_q(q_id){
+  alert('you are about to delete a text')
+  $.ajax({
+
+    header: {"Access-Control-Allow-Origin" :"*"},
+    datatype:'json',
+    type:'POST',
+    url:"https://lamp.ms.wits.ac.za/~s1819369/deleteMessage.php",
+    data:{id: q_id},success:(function(data){
+      alert(data);
+      window.location.reload(true);
+
+
+        })
+
+     });
+     return 1;
+};
+
+//clear all the messages_style
+function clear(studn,receiver_stud){
+  alert('you are about to clear the whole conversation')
+  $.ajax({
+
+    header: {"Access-Control-Allow-Origin" :"*"},
+    datatype:'json',
+    type:'POST',
+    url:"https://lamp.ms.wits.ac.za/~s1819369/deleteMessages.php",
+    data:{ studentNo: studn, rstudentNo:receiver_stud},success:(function(data){
+      alert(data);
+      window.location.reload(true);
+
+        })
+
+     });
+     return 1;
+};
+
+
+
+
 
 const sum1 = (vals) => {
 

@@ -1,6 +1,6 @@
 
 //Adding a submit function to the form
-$('#upload').submit(function(e){
+$('#uploads').submit(function(e){
 
      e.preventDefault();
 
@@ -11,7 +11,7 @@ $('#upload').submit(function(e){
 
         url: "https://lamp.ms.wits.ac.za/~s1819369/profpic.php",
 
-        //For file upload we use post request
+        //For file uploads we use post request
         type: "POST",
 
         //Creating data from form

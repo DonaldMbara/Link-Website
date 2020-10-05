@@ -70,15 +70,17 @@
 
 
     button {
+
         font-family: "Roboto", sans-serif;
         border: 1px solid black;
-        background-color:#32CD32;
+        background-color: #3132cd;
         color: black;
-        width: 20%;
-        right: 40%;
+        width: 8%;
+        right: 25%;
         outline: none;
         font-size: 16px;
         position: absolute;
+
         bottom: 50px;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 

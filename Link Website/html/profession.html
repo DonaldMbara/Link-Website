@@ -27,7 +27,7 @@
 
         <hr>
         <div  class="contents">
-            <form  id = "prof_form" method="post" >
+            <form action="upload.php" id = "prof_form" method="POST" enctype="multipart/form-data">
                 <p><h4><i>Apply for course to tutor</i></h4></p>
                 <label for="course">Choose course to tutor:</label>
                 <select name="course" id="course"  >
@@ -54,12 +54,16 @@
                     <hr>
                     <p>Upload your transcript</p>
                     <hr>
+
                     <label for="img">Select image:</label>
-                    <input type="file" id="img" name="img" accept="image/*">
-                    <input type="submit" id="apply" value="Apply">
+                    <input type="file" id="img" name="file">
+                    <!--<button type="submit" name="submit">UPLOAD</button>-->
+                    <input type="submit" id="apply" value="Apply" name="submit">
 
 
             </form>
+
+
 
         </div>
 

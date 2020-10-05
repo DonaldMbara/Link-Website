@@ -81,7 +81,7 @@ likeA(id,userid){
      return 1;
 }
 };
-//called to upload comments
+//called to uploads comments
 const obj5 = {
 comment_upload(comment,username, answer_id,){
    $.ajax({
@@ -97,7 +97,7 @@ comment_upload(comment,username, answer_id,){
   return 1;
 }
 };
-//called to upload answers
+//called to uploads answers
 const obj6 = {
 postAnswer( username, post_id ,answer){
     $.ajax({

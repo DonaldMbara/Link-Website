@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $('#prof_form').submit(function (e) {
         e.preventDefault();
+        var fd = new FormData();
 
         let course = $( "#course option:selected" ).text();
         let studentNo = localStorage.getItem("key");
@@ -17,20 +18,21 @@ $(document).ready(function () {
         let eDate = [day1, month1, year1].join('/');
 
         var image = "image/" + localStorage.getItem("key");
+          var files = $('#img')[0].files[0];
 
+          fd.append('file',files);
+          fd.append('courseID', course);
+          fd.append('studentNo',studentNo);
+          fd.append('sDate',sDate);
+          fd.append('eDate',eDate);
 
             $.ajax({
                 header: {"Access-Control-Allow-Origin": "*"},
                 type: "POST",
+                processData: false,
+                contentType: false,
                 url: 'https://lamp.ms.wits.ac.za/~s1819369/prof.php',
-                data: {
-                    courseID:course,
-                    studentNo:studentNo,
-                    sDate : sDate,
-                    eDate : eDate,
-                    image:image
-
-                },
+                data:fd,
                 success: function (data) {
 
                     alert(data);

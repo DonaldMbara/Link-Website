@@ -207,6 +207,7 @@
 
 
           var st = localStorage.getItem("key");
+          var usnm = localStorage.getItem("Fname")
           let static_studentNumber = st;
 
 
@@ -216,18 +217,19 @@
             url: 'https://lamp.ms.wits.ac.za/~s1819369/delaccount.php',
 
             data: {
-              studentNo : static_studentNumber
+              //sends username and not student number
+              studentNo : usnm
             },
             success : function(output){
-
-
+              alert("Your Account was successfully deleted");
+              window.location.href = "../html/login.html";
             }
 
             });
           }
             );
-            alert("Your Account was successfully deleted");
-            window.location.href = "../html/login.html";
+
+
 
       }
 

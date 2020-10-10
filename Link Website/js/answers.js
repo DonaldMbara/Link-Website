@@ -1,22 +1,6 @@
-const sum = (vals) => {
+const sum = (a, b) => a + b
+const mul = (a, b) => a * b
+const sub = (a, b) => a - b
+const div = (a, b) => a / b
 
-    let sum = 0;
-
-    vals.forEach((val) => {
-        sum += val;
-    });
-
-    return sum;
-}
-
-const positive = (vals) => {
-
-    return vals.filter((x) => { return x > 0; });
-}
-
-const negative = (vals) => {
-
-    return vals.filter((x) => { return x < 0; });
-}
-
-module.exports = { sum, positive, negative };
+module.exports = { sum, mul, sub, div }

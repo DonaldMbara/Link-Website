@@ -75,14 +75,18 @@
                     // alert(e_mail);
                     if (  CourseId === undefined || sDate === undefined || eDate === undefined){
                       $('#prof').html("Profession (Tutoring) : ".concat("None"));
+
                       $('#myPopup').html("None" + "<hr>" +" Starting Date: ".concat("None") + " </br> " + "Ending Date : ".concat("None") );
 
 
                     }
                     else {
-                      $('#prof').html("Profession (Tutoring) : ".concat(CourseId) + " (Pending)");
-                        $('#myPopup').html("Transcript Verification in process"+" <hr>" +" Starting Date: ".concat(sDate) + " </br> " + "Ending Date : ".concat(eDate) );
 
+
+
+                      $('#prof').html("Profession (Tutoring) : ".concat(CourseId) + " (Pending)");
+
+                        $('#myPopup').html("Transcript Verification in process"+" <hr>" +" Starting Date: ".concat(sDate) + " </br> " + "Ending Date : ".concat(eDate) );
 
                     }
 
@@ -300,7 +304,7 @@
         </div>
 
 
-        <div id="text1" class="contents">
+          <div id="text1" class="contents">
           surname Loading...
 
         </div>

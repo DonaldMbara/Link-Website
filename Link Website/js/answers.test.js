@@ -4,6 +4,7 @@
         .dontMock('fs')
         .dontMock('jquery');
 
+var b;
 global.window = window
 global.$ = require('jquery');
 window.$ = $;

@@ -50,6 +50,27 @@ const class2 = {
        return 1;
   }
 };
+
+//liking a q
+const class3 = {
+ like(post_id, userid){
+   $.ajax({
+     header: {"Access-Control-Allow-Origin" :"*"},
+     datatype:'json',
+     type: "POST",
+     url: 'https://lamp.ms.wits.ac.za/~s1819369/Testing.php',
+     data:{id:post_id, userid:userid},
+     success: function (data, status) {
+         $(this).val(data.likes);
+         window.location.reload(true);
+
+        }
+      });
+    return 1;
+ }
+
+};
+
 $(document).ready(function(){
     var courseid= localStorage.getItem("c_id");
     var userid = localStorage.getItem("key");
@@ -70,8 +91,7 @@ $(document).ready(function(){
   $('body').on('click','i',function(e){
     var id  = $(this).parent();
     var post_id = id[0].id;
-    const {obj,obj2,obj3,obj4,obj5,obj6, obj7} = require('./answers');
-    obj3.like(post_id, userid);
+    class3.like(post_id, userid);
    });
 
 
@@ -93,15 +113,15 @@ $(document).ready(function(){
     });
 
 // this takes the required data and loads the answers html
-    $('body').on('click', '.question_card', function() {
+    $('body').on('click', '#question_content', function() {
 
        n = $(this).contents();
-       var post_id = (this.id);
+       var post_id = $(this).parent()[0].id;
        localStorage.setItem("post_id",post_id);
-       localStorage.setItem("author",$(this).find("#author").text());
-       localStorage.setItem("question",$(this).find("#question_content").text());
-       localStorage.setItem("date",$(this).find("#date").text());
-       localStorage.setItem("likes",$(this).find("#like_button").text());
+       localStorage.setItem("author",$("#"+post_id).find("#author").text());
+       localStorage.setItem("question",$("#"+post_id).find("#question_content").text());
+       localStorage.setItem("date",$("#"+post_id).find("#date").text());
+       localStorage.setItem("likes",$("#"+post_id).find("#like_button").text());
        localStorage.setItem("userid",userid);
         window.location.href = "answers.html";
         });

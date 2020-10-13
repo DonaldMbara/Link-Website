@@ -7,15 +7,23 @@
 body{
     background: linear-gradient(to left, #8942a8, #ba382f );
 }
+.message-box{
+  overflow: hidden;
+  float: right;
+  width:65%;
+  background: #fff;
+  overflow-x: hidden;
+}
 .chatbox{
     float: right;
     width: 100%;
     height: 100%;
     border: 1px solid white;
     background-color:lightyellow;
-
+    overflow:hidden;
 }
 .chatlogs{
+    overflow:scroll;
     width: 100%;
     height: 90%;
     background-color:lightyellow;

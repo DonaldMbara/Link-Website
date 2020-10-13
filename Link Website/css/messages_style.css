@@ -24,10 +24,12 @@ body{
     overflow:hidden;
 }
 .chatlogs{
-    overflow:scroll;
+    overflow-y:scroll;
     width: 100%;
     height: 90%;
     background-color:lightyellow;
+    overflow-x: hidden;
+
 
 }
 .in{

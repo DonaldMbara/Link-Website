@@ -1,5 +1,5 @@
 function getDetails(receiver_stud,sender_stud) {
-    var current_user = localStorage.getItem("studNo");
+    var current_user = localStorage.getItem("key");
     $.ajax({
         header: {"Access-Control-Allow-Origin": "*"},
         datatype: 'json',

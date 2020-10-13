@@ -21,6 +21,14 @@ body{
     background-color:lightyellow;
 
 }
+.in{
+  display: inline-block;
+}
+
+#time_div{
+  font-size: 10px;
+  float: right;
+}
 
 .chatlogs::-webkit-scrollbar{
     width: 10px;

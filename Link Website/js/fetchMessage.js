@@ -1,5 +1,5 @@
 function getDetails(receiver_stud,sender_stud) {
-    var current_user = localStorage.getItem("studNo");
+    var current_user = localStorage.getItem("key");
     $.ajax({
         header: {"Access-Control-Allow-Origin": "*"},
         datatype: 'json',
@@ -23,11 +23,15 @@ function getDetails(receiver_stud,sender_stud) {
                 output += '</div>';
                 output += '</div>';
                 output += '<p id="comment_p">' + value.message + '</p>';
+                output += '<p id="sender_div" class= "in">' + value.sender + '</p>';
+                output += '<p id="time_div" class="in">' + value.time + '</p>';
                 output += '</div>';
                  }
                else{
                  output += '<div id = "left" class = "left_message_card">';
                  output += '<p id="comment_p">' + value.message + '</p>';
+                 output += '<p id="sender_div" class= "in">' + value.sender + '</p>';
+                 output += '<p id="time_div" class="in">' + value.time + '</p>';
                  output += '</div>';
                };
 

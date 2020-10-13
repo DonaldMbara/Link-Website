@@ -49,7 +49,7 @@ chatlogs::-webkit-scrollbar{
 
 .chat-form{
      height: 50px;
-     background-color:  #094b46 ;
+     background-color:  #fff;
     display: flex;
     align-items: flex-start;
 }
@@ -81,7 +81,7 @@ chatform textarea::-webkit-scrollbar{
 
 
 .button{
-    background: #000000;
+    background: #094b46;
     font-size: 30px;
     color: #fff;
     border: none;

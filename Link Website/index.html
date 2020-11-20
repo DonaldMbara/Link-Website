@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Splash Screen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <style>
+        body {
+          height: 100vh;
+          background: linear-gradient(to left, #8942a8, #ba382f );
+            margin: 0 auto;
+            padding: 0;
+        }
+        .header {
+            background: linear-gradient(to left, #8942a8, #ba382f );
+            color: black;
+            text-align: center;
+            padding: 15px;
+        }
+        .logo{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35%;
+        }
+
+        button {
+            font-family: "Roboto", sans-serif;
+            border: 1px solid black;
+            bottom: auto;
+            background-color: #ba382f;
+            border-radius: 12px;
+            color: black;
+            width: 100%;
+            outline: none;
+            font-size: 16px;
+            position: fixed;
+            bottom: 50px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+        }
+
+        button:hover{
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1 class="welcome-text"><b>Welcome</b></h1>
+    </div>
+    <div class="col-3 col-s-12">
+        <div class="aside">
+            <img class="logo" src="image/linkhands3.png" >
+
+        </div>
+    </div>
+
+    <button onclick="window.location.href = 'html/login.html'">Continue</button>
+</body>
+</html>
